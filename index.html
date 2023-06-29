@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 
-    
+
     <title>Anki Card Generator</title>
 </head>
   <body>
@@ -20,29 +20,33 @@
         </h1>
       </header>
       <section class="card-section">
-        <p id="question"></p>
-        <form class="question-form">
-          <label>
-            <input type="radio" name="question-type" value="behavorial">
-            Behavorial
-          </label>
-          <label>
-            <input type="radio" name="question-type" value="html">
-            HTML
-          </label>
-          <label>
-            <input type="radio" name="question-type" value="css">
-            CSS
-          </label>
-          <label>
-            <input type="radio" name="question-type" value="javascript">
-            Javascript
-          </label>
-          <label>
-            <input type="radio" name="question-type" value="github">
-            Github
-          </label>
-          <button id="generate-btn">Generate question</button>
+        <section class="card-shape">
+          <p id="question"></p>
+        </section>
+        <section class="form-container">
+          <form class="question-form">
+            <label>
+              <input type="radio" name="question-type" value="behavorial">
+              Behavorial
+            </label>
+            <label>
+              <input type="radio" name="question-type" value="html">
+              HTML
+            </label>
+            <label>
+              <input type="radio" name="question-type" value="css">
+              CSS
+            </label>
+            <label>
+              <input type="radio" name="question-type" value="javascript">
+              Javascript
+            </label>
+            <label>
+              <input type="radio" name="question-type" value="github">
+              Github
+            </label>
+            <button id="generate-btn">Generate question</button>
+          </form>
         </form>
       </section>
       <script type="text/javascript" src="js/main.js"></script>
