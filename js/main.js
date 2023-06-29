@@ -1,7 +1,9 @@
 let currentQuestion = null;
 let showingQuestion = true;
 let askedQuestions = [];
-const url = "js/questions.json"
+let shuffledQuestions = [];
+let questionIndex = 0;
+const url = "js/questions.json";
 
 document.addEventListener('DOMContentLoaded', function() {
   // Make sure DOM is fully loaded before use
@@ -19,7 +21,7 @@ function reqData(callback) {
     .catch(error => {
       // Show error if json file is not fetched
       console.error('Error fetching questions:', error);
-    })
+    });
 }
 
 function loadRandomQuestion(event) {
@@ -34,27 +36,24 @@ function loadRandomQuestion(event) {
     }
     // Store value of user input
     const questionType = selectedQuestionType.value;
-    if (questionType in data){
+    if (questionType in data) {
       const questionsOfType = data[questionType];
       // Verify that questionType exists
       if (questionsOfType && questionsOfType.length > 0) {
-        // Filter out already asked questions
-        const availableQuestions = questionsOfType.filter(question => !askedQuestions.includes(question));
-        if (availableQuestions.length === 0) {
-          showCurrentQuestion('All questions have been asked. Please reload the page.');
+        // Check if all questions of the current type have been asked
+        if (askedQuestions.length === questionsOfType.length) {
+          showCurrentQuestion('All questions have been asked.');
           return;
         }
-        // Randomly generate a question based on question-type
-        const randomIndex = Math.floor(Math.random() * availableQuestions.length);
-        const randomQuestion = availableQuestions[randomIndex];
-        if (randomQuestion) {
-          // Store random question and mark it as asked
-          currentQuestion = randomQuestion;
-          askedQuestions.push(randomQuestion);
-          showCurrentQuestion(currentQuestion.question);
-        } else {
-          showCurrentQuestion('No questions available for the selected type.');
+        // If all questions have not been asked, reshuffle the questions if needed
+        if (askedQuestions.length === 0 || questionIndex === 0) {
+          shuffledQuestions = shuffleArray(questionsOfType);
         }
+        // Get the next question from the shuffled array
+        currentQuestion = shuffledQuestions[questionIndex];
+        questionIndex = (questionIndex + 1) % shuffledQuestions.length;
+        askedQuestions.push(currentQuestion);
+        showCurrentQuestion(currentQuestion.question);
       } else {
         showCurrentQuestion('No questions available for the selected type.');
       }
@@ -92,4 +91,14 @@ function toggleQuestionAnswer() {
   if (currentQuestion) {
     showCurrentQuestion(showingQuestion ? currentQuestion.question : currentQuestion.answer);
   }
+}
+
+// Shuffle array using the Fisher-Yates algorithm
+function shuffleArray(array) {
+  const shuffledArray = [...array];
+  for (let i = shuffledArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+  }
+  return shuffledArray;
 }
