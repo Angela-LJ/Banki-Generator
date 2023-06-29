@@ -14,41 +14,41 @@
     <title>Anki Card Generator</title>
 </head>
   <body>
-      <header>
+      <header class="flex">
         <h1 class="header-title">
           Random Anki Generator
         </h1>
       </header>
-      <section class="card-section">
-        <section class="card-shape">
+      <section class="card-section flex">
+        <section class="card-shape flex">
           <p id="question"></p>
+          <button id="answer-btn">Show Answer</button>
         </section>
-        <section class="form-container">
-          <form class="question-form">
-            <label>
+        <section class="form-container flex">
+          <form class="question-form flex">
+            <label for="behavorial">
               <input type="radio" name="question-type" value="behavorial">
               Behavorial
             </label>
-            <label>
+            <label for="html">
               <input type="radio" name="question-type" value="html">
               HTML
             </label>
-            <label>
+            <label for="css">
               <input type="radio" name="question-type" value="css">
               CSS
             </label>
-            <label>
+            <label for="javascript">
               <input type="radio" name="question-type" value="javascript">
               Javascript
             </label>
-            <label>
+            <label for="github">
               <input type="radio" name="question-type" value="github">
               Github
             </label>
             <button id="generate-btn">Generate question</button>
           </form>
-        </form>
       </section>
-      <script type="text/javascript" src="js/main.js"></script>
+      <script src="js/main.js"  type="text/javascript"></script>
   </body>
 </html>
