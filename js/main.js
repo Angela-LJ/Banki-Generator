@@ -3,17 +3,40 @@ let showingQuestion = true;
 let askedQuestions = [];
 let shuffledQuestions = [];
 let questionIndex = 0;
+let data = null;
 const url = "js/questions.json";
 
+ // Make sure DOM is fully loaded before use
 document.addEventListener('DOMContentLoaded', function() {
-  // Make sure DOM is fully loaded before use
-  const generateBtn = document.getElementById('generate-btn');
-  generateBtn.addEventListener('click', loadRandomQuestion);
+ 
+  // Store fetched data in data
+  reqData(function(fetchedData) {
+    data = fetchedData;
+    
+    // Add event listener to generate button
+    const generateBtn = document.getElementById('generate-btn');
+    generateBtn.addEventListener('click', function(event) {
+      const selectedQuestionType = document.querySelector('input[name="question-type"]:checked').value;
+      // Call load random question and pass in type and data
+      loadRandomQuestion(event, selectedQuestionType, data);
+    });
+  });
+});
+
+// Add event listener to radio buttons
+const questionTypeRadios = document.querySelectorAll('input[name="question-type"]');
+questionTypeRadios.forEach(radio => {
+  radio.addEventListener('change', function() {
+    // Reset question when new question type is selected 
+    askedQuestions = [];
+    questionIndex = 0;
+    showCurrentQuestion('Press button to generate question');
+  });
 });
 
 function reqData(callback) {
   // Fetch data from questions.json
-  fetch(url)
+  return fetch(url)
     .then(res => res.json())
     .then(data => {
       callback(data);
@@ -24,47 +47,40 @@ function reqData(callback) {
     });
 }
 
-function loadRandomQuestion(event) {
-  // Prevent default values after question has been shown
+function loadRandomQuestion(event, questionType, data) {
   event.preventDefault();
-  reqData(function(data) {
-    // Check for user input of question-type
-    const selectedQuestionType = document.querySelector('input[name="question-type"]:checked');
-    if (!selectedQuestionType) {
-      showCurrentQuestion('Please select a question type.');
+  // Check if question type is in data
+  if (questionType in data) {
+    const questionsOfType = data[questionType];
+
+    if (questionsOfType.length === 0) {
+      showCurrentQuestion('No questions available for the selected type.');
       return;
     }
-    // Store value of user input
-    const questionType = selectedQuestionType.value;
-    if (questionType in data) {
-      const questionsOfType = data[questionType];
-      // Verify that questionType exists
-      if (questionsOfType && questionsOfType.length > 0) {
-        // Check if all questions of the current type have been asked
-        if (askedQuestions.length === questionsOfType.length) {
-          showCurrentQuestion('All questions have been asked.');
-          return;
-        }
-        // If all questions have not been asked, reshuffle the questions if needed
-        if (askedQuestions.length === 0 || questionIndex === 0) {
-          shuffledQuestions = shuffleArray(questionsOfType);
-        }
-        // Get the next question from the shuffled array
-        currentQuestion = shuffledQuestions[questionIndex];
-        questionIndex = (questionIndex + 1) % shuffledQuestions.length;
-        askedQuestions.push(currentQuestion);
-        showCurrentQuestion(currentQuestion.question);
-      } else {
-        showCurrentQuestion('No questions available for the selected type.');
-      }
+    // Check if all questions have been asked
+    if (askedQuestions.length === questionsOfType.length) {
+      showCurrentQuestion('All questions have been asked, change type or refresh.');
+      return;
     }
-  });
+    // If all questions have not been asked, reshuffle the questions if needed
+    if (askedQuestions.length === 0 || questionIndex === 0) {
+      shuffledQuestions = shuffleArray(questionsOfType);
+    }
+    // Get the next question from the shuffled array
+    currentQuestion = shuffledQuestions[questionIndex];
+    questionIndex = (questionIndex + 1) % shuffledQuestions.length;
+    askedQuestions.push(currentQuestion);
+    showCurrentQuestion(currentQuestion.question);
+  } else {
+    showCurrentQuestion('No questions available for the selected type.');
+  }
 }
 
 function showCurrentQuestion(questionText) {
   // Store selectors for question and answer-btn elements
   const questionElement = document.querySelector('#question');
   const answerBtn = document.getElementById('answer-btn');
+  
   // Verify that question has been picked and show text
   if (showingQuestion) {
     questionElement.innerHTML = questionText;
