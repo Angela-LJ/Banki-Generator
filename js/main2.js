@@ -1,5 +1,3 @@
-import questionsAnswers from "./questions.js"
-
 (function() {
   // Initialize variables with IIFE
   let currentQuestion = null;
@@ -7,15 +5,22 @@ import questionsAnswers from "./questions.js"
   let askedQuestions = [];
   let shuffledQuestions = [];
   let questionIndex = 0;
+  
 
   // Make sure DOM is fully loaded before use
   document.addEventListener('DOMContentLoaded', function() {
-    // Add event listener to generate button
-    const generateBtn = document.getElementById('generate-btn');
-    generateBtn.addEventListener('click', function(event) {
-      const selectedQuestionType = document.querySelector('input[name="question-type"]:checked').value;
-      // Call load random question and pass in type and data
-      loadRandomQuestion(event, selectedQuestionType, questionsAnswers);
+    let data = null;
+    // Store fetched data in data
+    reqData(function(fetchedData) {
+      data = fetchedData;
+
+      // Add event listener to generate button
+      const generateBtn = document.getElementById('generate-btn');
+      generateBtn.addEventListener('click', function(event) {
+        const selectedQuestionType = document.querySelector('input[name="question-type"]:checked').value;
+        // Call load random question and pass in type and data
+        loadRandomQuestion(event, selectedQuestionType, data);
+      });
     });
   });
 
@@ -30,11 +35,25 @@ import questionsAnswers from "./questions.js"
     });
   });
 
-  function loadRandomQuestion(event, questionType, questions) {
+  function reqData(callback) {
+    const url = "js/questions.json";
+    // Fetch data from questions.json
+    return fetch(url)
+      .then(res => res.json())
+      .then(data => {
+        callback(data);
+      })
+      .catch(error => {
+        // Show error if json file is not fetched
+        console.error('Error fetching questions:', error);
+      });
+  }
+
+  function loadRandomQuestion(event, questionType, data) {
     event.preventDefault();
     // Check if question type is in data
-    if (questionType in questions) {
-      const questionsOfType = questions[questionType];
+    if (questionType in data) {
+      const questionsOfType = data[questionType];
 
       if (questionsOfType.length === 0) {
         showCurrentQuestion('No questions available for the selected type.');
@@ -58,6 +77,7 @@ import questionsAnswers from "./questions.js"
       showCurrentQuestion('No questions available for the selected type.');
     }
   }
+
   function showCurrentQuestion(questionText) {
     // Store selectors for question and answer-btn elements
     const questionElement = document.querySelector('#question');
@@ -91,13 +111,14 @@ import questionsAnswers from "./questions.js"
     }
   }
 })();
-// Shuffle array using the Fisher-Yates algorithm
-function shuffleArray(array) {
-  const shuffledArray = [...array];
-  for (let i = shuffledArray.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+
+  // Shuffle array using the Fisher-Yates algorithm
+  function shuffleArray(array) {
+    const shuffledArray = [...array];
+    for (let i = shuffledArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+    }
+    return shuffledArray;
   }
-  return shuffledArray;
-}
 
