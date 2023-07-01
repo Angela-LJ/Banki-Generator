@@ -36,12 +36,9 @@ import questionsAnswers from "./questions.js"
     if (questionType in questions) {
       const questionsOfType = questions[questionType];
 
-      if (questionsOfType.length === 0) {
-        showCurrentQuestion('No questions available for the selected type.');
-        return;
-      }
       // Check if all questions have been asked
       if (askedQuestions.length === questionsOfType.length) {
+        currentQuestion = null;
         showCurrentQuestion('All questions have been asked, change type or refresh.');
         return;
       }
@@ -58,6 +55,7 @@ import questionsAnswers from "./questions.js"
       showCurrentQuestion('No questions available for the selected type.');
     }
   }
+
   function showCurrentQuestion(questionText) {
     // Store selectors for question and answer-btn elements
     const questionElement = document.querySelector('#question');
@@ -91,6 +89,7 @@ import questionsAnswers from "./questions.js"
     }
   }
 })();
+
 // Shuffle array using the Fisher-Yates algorithm
 function shuffleArray(array) {
   const shuffledArray = [...array];
