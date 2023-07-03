@@ -13,22 +13,21 @@ import questionsAnswers from "./questions.js"
     // Add event listener to generate button
     const generateBtn = document.getElementById('generate-btn');
     generateBtn.addEventListener('click', function(event) {
-      const selectedQuestionType = document.querySelector('option[name="question-type"]:checked').value;
+      const selectQuestion = document.getElementById('question-select');
+      const selectedQuestionType = selectQuestion.value;
       // Call load random question and pass in type and data
       loadRandomQuestion(event, selectedQuestionType, questionsAnswers);
     });
   });
 
   // Add event listener to radio buttons
-  const questionTypeRadios = document.querySelectorAll('option[name="question-type"]');
-  questionTypeRadios.forEach(radio => {
-    radio.addEventListener('change', function() {
+  const questionTypeSelect = document.getElementById('question-select');
+  questionTypeSelect.addEventListener('change', function() {
       // Reset question when new question type is selected
       askedQuestions = [];
       questionIndex = 0;
       showCurrentQuestion('Press button to generate question');
     });
-  });
 
   function loadRandomQuestion(event, questionType, questions) {
     event.preventDefault();
