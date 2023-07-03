@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Random question generator">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <title>Anki Card Generator</title>
+</head>
+  <body>
+      <header class="flex">
+        <h1 class="header-title">
+          Random Anki Generator
+        </h1>
+      </header>
+      <section class="card-section flex">
+        <section class="card-shape flex">
+          <p id="question"></p>
+          <button id="answer-btn">Show Answer</button>
+        </section>
+      </section>
+      <section class="form-container flex">
+        <form class="question-form flex" onsubmit="handleFormSubmit(event)">
+        <label for ="question-select">Choose a Question Type:</label>
+        <select name ="question-type" id="question-select">
+                <option value="javascriptQ">Javascript Questions</option>
+                <option value="gitQ">Git Questions</option>
+                <option value="pythonQ">Python Questions</option>
+                <option value="cQ">C Questions</option>
+                <option value="javascriptP">Javascript Practice</option>
+                <option value="pythonP">Python Practice</option>
+                <option value="cP">C Practice</option>
+        </select>
+        <div class="button-container">
+            <button id="generate-btn">Generate question</button>
+        </div>
+        </form>
+      </section>
+      <script defer src="js/main.js"  type="module"></script>
+  </body>
+</html>

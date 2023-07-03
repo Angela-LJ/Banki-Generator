@@ -84,9 +84,10 @@ header {
   margin-left: 0;
   padding: 1% 5%;
   width: auto;
-  position: absolute; 
+  position: absolute;
   bottom: 20px;
 }
+
 #question {
   width: 90%;
   height: auto;
@@ -109,11 +110,13 @@ header {
 .column-container {
   display: grid;
   grid-template-columns: repeat(2, auto);
-  grid-gap: 100px;
+  /* grid-gap: 100px; */
+  gap: 100px;
 }
 .column {
   display: grid;
-  grid-gap: 10px;
+  /* grid-gap: 10px; */
+  gap: 10px;
 }
 .button-container {
   display: flex;
