@@ -67,9 +67,9 @@ import questionsAnswers from "./questions.js"
     } else {
       // Show answer if toggled, and create a UL and LI for each part of answer
       const answerList = currentQuestion.answer;
-      let answerHtml = '<ul>';
+      let answerHtml = '<ul class="answer-list">';
       answerList.forEach(answer => {
-        answerHtml += `<li>${answer}</li>`;
+        answerHtml += `<li><pre>${answer}</pre></li>`;
       });
       answerHtml += '</ul>';
       questionElement.innerHTML = answerHtml;

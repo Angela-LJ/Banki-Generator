@@ -1,552 +1,1232 @@
-
 const questionsAnswers = {
-  behavorial: [
+  javascriptP: [
     {
+      "question": "Create a for loop that prints the numbers from 1 to 10.",
+      "answer": [
+        "for (let i = 1; i <= 10; i++)"
+      ]
+    },
+    {
+      "question": 'Declare a constiable called "message" and assign it the value "Hello, World!".',
+      "answer": [
+        'let message = "Hello, World!";'
+      ]
+    },
+    {
+      "question": 'Write a function called "double" that takes a number as input and returns its double.',
+      "answer": [
+        `function double(num) {
+            return num * 2;
+          }`
+      ]
+    },
+    {
+      "question": 'Use the addition operator to concatenate the strings "Hello" and "World".',
+      "answer": [
+        `"Hello" + "World";`
+      ]
+    },
+    {
+      "question": "Create a function named 'multiply' that takes two parameters 'num1' and 'num2' and returns their product.",
+      "answer": [
+        "function multiply(num1, num2) {\n return num1 * num2;\n}"
+      ]
+    },
+    {
+      "question": "Write a JavaScript function named 'isEven' that takes a number as a parameter and returns true if the number is even, and false otherwise.",
+      "answer": [
+        "function isEven(number) {\n return number % 2 === 0;\n}"
+      ]
+    },
+    {
+      "question": "Create an array named 'fruits' and initialize it with the values 'apple', 'banana', and 'orange'.",
+      "answer": [ 
+        "let fruits = ['apple', 'banana', 'orange'];"
+      ]
+    },
+    {
+      "question": "Write a JavaScript function named 'getLength' that takes an array as a parameter and returns its length.",
+      "answer": [
+        "function getLength(array) {\n return array.length;\n}"
+      ]
+    },
+    {
+      "question": "Create a conditional statement that checks if a constiable 'age' is greater than or equal to 18, and if so, prints 'You are an adult.'",
+      "answer": [
+        "if (age >= 18) {\n console.log('You are an adult.');\n}"
+      ]
+    },
+    {
+      "question": "Write a JavaScript function named 'reverseString' that takes a string as a parameter and returns the reversed version of the string.",
+      "answer": [
+        "function reverseString(string) {\n return string.split('').reverse().join('');\n}"
+      ]
+    },
+    {
+      "question": "Create an object named 'person' with properties 'name' and 'age' and assign appropriate values.",
+      "answer": [
+        "let person = {\n name: 'John Doe',\n age: 25\n};"
+      ]
+    },
+    {
+      "question": "Write a JavaScript function named 'sumArray' that takes an array of numbers as a parameter and returns the sum of all the numbers.",
+      "answer": [
+        "function sumArray(array) {\n return array.reduce((sum, num) => sum + num, 0);\n}"
+      ]
+    },
+    {
+      "question": "Create a while loop that prints the numbers from 1 to 5.",
+      "answer": [
+        "let i = 1;\nwhile (i <= 5) {\n console.log(i);\n i++;\n}"
+      ]
+    },
+    {
+      "question": "Write a JavaScript function named 'capitalizeString' that takes a string as a parameter and returns the string with the first letter capitalized.",
+      "answer": [
+        "function capitalizeString(string) {\n return string.charAt(0).toUpperCase() + string.slice(1);\n}"
+      ]
+    },
+    {
+      "question": "Write a function named 'sumArray' that takes an array of numbers as an argument and returns the sum of all the numbers.",
+      "answer": [
+        "function sumArray(numbers) { \n let sum = 0; \n for (let i = 0; i < numbers.length; i++) { \n sum += numbers[i]; \n } \n return sum; \n}"
+      ]
+    },
+    {
+      "question": "Create an object named 'car' with properties 'brand', 'model', and 'year', and assign the values 'Toyota', 'Camry', and 2022 to them.",
+      "answer": [
+        "let car = { \n brand: 'Toyota', \n model: 'Camry', \n year: 2022 \n};"
+      ]
+    },
+    {
+      "question": "Write a function named 'capitalize' that takes a string as an argument and returns the same string with the first letter capitalized.",
+      "answer": [
+        "function capitalize(str) { \n return str.charAt(0).toUpperCase() + str.slice(1); \n}"
+      ]
+    },
+    {
+      "question": "Create an array named 'numbers' with five elements: 1, 2, 3, 4, and 5.",
+      "answer": [
+        "let numbers = [1, 2, 3, 4, 5];"
+      ]
+    },
+    {
+      "question": "Round the number 3.14159 to the nearest integer using the Math object.",
+      "answer": [
+        "Math.round(3.14159);"
+      ]
+    },
+    {
+      "question": "Calculate the square root of 25 using the Math object.",
+      "answer": [
+        "Math.sqrt(25);"
+      ]
+    },
+    {
+      "question": "Create an array named 'positiveNumbers' that contains only the positive numbers from the 'numbers' array using the filter method.",
+      "answer": [
+        "let positiveNumbers = numbers.filter(num => num > 0);"
+      ]
+    },
+    {
+      "question": "Create an array named 'evenNumbers' that contains only the even numbers from the 'numbers' array using the filter method.",
+      "answer": [
+        "let evenNumbers = numbers.filter(num => num % 2 === 0);"
+      ]
+    },
+    {
+      "question": "Create an array named 'squaredNumbers' that contains the square of each number from the 'numbers' array using the map method.",
+      "answer": [
+        "let squaredNumbers = numbers.map(num => num * num);"
+      ]
+    },
+    {
+      "question": "Create an array named 'doubleNumbers' that contains double the value of each number from the 'numbers' array using the map method.",
+      "answer": [
+        "let doubleNumbers = numbers.map(num => num * 2);"
+      ]
+    },
+    {
+      "question": "Calculate the sum of all numbers in the 'numbers' array using the reduce method.",
+      "answer": [
+        "let sum = numbers.reduce((acc, num) => acc + num, 0);"
+      ]
+    },
+    {
+      "question": "Calculate the average of all numbers in the 'numbers' array using the reduce method.",
+      "answer": [
+        "let average = numbers.reduce((acc, num) => acc + num, 0) / numbers.length;"
+      ]
+    },
+    {
+      "question": "Create an array named 'sortedNumbers' that contains the numbers from the 'numbers' array in ascending order using the sort method.",
+      "answer": [
+        "let sortedNumbers = numbers.sort((a, b) => a - b);"
+      ]
+    },
+    {
+      "question": "Find the maximum number from the 'numbers' array using the Math.max method.",
+      "answer": [
+        "let maxNumber = Math.max(...numbers);"
+      ]
+    },
+    {
+      "question": "Find the minimum number from the 'numbers' array using the Math.min method.",
+      "answer": [
+        "let minNumber = Math.min(...numbers);"
+      ]
+    },
+    {
+      "question": "Create an array named 'filteredNames' that contains only the names starting with the letter 'A' from the 'names' array using the filter method.",
+      "answer": [
+        "let filteredNames = names.filter(name => name.charAt(0) === 'A');"
+      ]
+    },
+    {
+      "question": "Create an array named 'nameLengths' that contains the length of each name from the 'names' array using the map method.",
+      "answer": [
+        "let nameLengths = names.map(name => name.length);"
+      ]
     }
   ],
-  html: [
+  javascriptQ: [
     {
-      "question": "What does a doctype do?",
+      "question": "How do you access the properties of an object in JavaScript?",
       "answer": [
-        "Instructions to the browser about what version of HTML the webpage is written in, ensuring the web page is parsed the same way across web browsers.",
-        "Use: It's the first line of code in the HTML document",
-        "Example: For an HTML5 document the tag would be &lt;!DOCTYPE html/&gt;"
+        "You can access the properties of an object using dot notation or bracket notation."
       ]
     },
     {
-      "question": "How do you serve a page with content in multiple languages?",
+      "question": "What is the difference between == and === operators in JavaScript?",
       "answer": [
-        "By setting the lang attributes on the various elements within the page.",
-        "Use: The lang attribute can be used on various elements (typically html, p, li...)",
-        "Example: You can set the whole site as being english by setting the html element &lt;html lang='en'/&gt; Or you could set a paragraph as spanish with &lt;p lang='es'/&gt;"
+        "The == operator compares the values of two operands, while the === operator compares the values and types of two operands."
       ]
     },
     {
-      "question": "What kinds of things must you be wary of when designing or developing for multilingual sites?",
+      "question": "How do you declare a constiable in JavaScript?",
       "answer": [
-        "Including the lang attribute", 
-        "Allowing users to change the language", 
-        "Minimize text in raster based images",
-        "Text overflow when translated", 
-        "How colors are perceived",
-        "Date and currency formats", 
-        "Language reading direction",
-        "Don't concatenate translated strings"
+        "You can declare a constiable in JavaScript using the 'const', 'let', or 'const' keyword."
       ]
     },
     {
-      "question": "What are data- attributes good for?",
+      "question": "What is the difference between let, const, and const in JavaScript?",
       "answer": [
-        "They store data private to the page or application.",
-        "Use: They were often used for storing extra data in the DOM, but are generally discouraged now.",
-        "Example: The exception is to add a hook for end to end testing frameworks like Selenium."
+        "'const' has function scope, 'let' and 'const' have block scope. 'const' is used for constiables that won't be reassigned, while 'let' and 'const' can be reassigned."
       ]
     },
     {
-      "question": "Consider HTML5 as an open web platform. What are the building blocks of HTML5?",
+      "question": "What are the different data types in JavaScript?",
       "answer": [
-        "Semantics:, Describe the content", 
-        "Connectivity: Communicate with the server", 
-        "Offline and storage: Store data client-side", 
-        "Multimedia: Make audio and video first-class citizens", 
-        "Graphics and effects: Diverse range of presentation options", 
-        "Performance and integration: Speed optimization", 
-        "Device access: Various input and output devices", 
-        "Styling: More sophisticated themes"
+        "JavaScript has several data types, including number, string, boolean, object, null, and undefined."
       ]
     },
     {
-      "question": "Describe the difference between a cookie, sessionStorage and localStorage.",
+      "question": "How do you define a function in JavaScript?",
       "answer": [
-        "Cookies can be initiated by the server, have a manually set expiration date, are small file size, and are sent to the server with HTTP request. Local and session storage are both initiated by the client, are a relatively large file, and aren't sent to the server. The main difference between local and session storage is that local storage will persist forever until cleared manually.",
-        "Use:  They are all used for client side storage of strings in key-value pairs."
+        "You can define a function using the 'function' keyword followed by the function name and parentheses, optionally followed by parameters and a function body."
       ]
     },
     {
-      "question": "Describe the difference between &lt;script/&gt;, &lt;script async/&gt; and &lt;script defer/&gt;.",
+      "question": "What is the difference between function declarations and function expressions in JavaScript?",
       "answer": [
-        "&lt;script/&gt; HTML parsing is blocked, script is fetched and executed immediately",
-        "&lt;script async/&gt; script fetched in parallel to HTML parsing and executed as soon as it is available",
-        "&lt;script defer/&gt; script fetched in parallel to HTML parsing and executed when the page has finished parsing.",
-        "Use async when the script is independent of any other scripts on the page",
-        "defer is useful when you need to make sure the HTML is fully parsed before executing",
-        "Example: async could be used for analytics scripts",
-        "A deferred script must not contain document.write"
+        "Function declarations are hoisted, meaning they can be called before they are defined. Function expressions are not hoisted and must be defined before they are called."
       ]
     },
     {
-      "question": "Why is it generally a good idea to position CSS &lt;link/&gt;s within &lt;head/&gt; and JS &lt;script/&gt;s just before &lt;/body/&gt;? Do you know any exceptions?",
+      "question": "What is the purpose of the 'this' keyword in JavaScript?",
       "answer": [
-        "Putting &lt;link/&gt;s in the &lt;head/&gt; allows for quick 'first meaningful paint'. Placing the scripts at the bottom will allow the HTML to be parsed and displayed to the user first. Exceptions: When your script contains document.write, or if you need scripts to run on page load, it may be beneficial to split them out from your main script and place them in the head.",
-        "Exceptions: When your script contains document.write, however, it isn't considered good practice to use document.write. Also, if you need scripts to run on page load it may be beneficial to split them out from your main script and place them in the head"
+        "The 'this' keyword refers to the object that is executing the current function or method."
       ]
     },
     {
-      "question": "What is progressive rendering?",
+      "question": "How do you handle errors in JavaScript?",
       "answer": [
-        "Techniques used to improve the performance of a webpage to render content for display as quickly as possible",
-        "Use: Improving perceived load time",
-        "Example: Lazy loading of images, Prioritizing visible content (or above-the-fold rendering) and Async HTML fragments"
+        "You can use try-catch statements to handle errors in JavaScript. The 'try' block contains the code that might throw an error, and the 'catch' block handles the error if it occurs."
       ]
     },
     {
-      "question": "Why would you use a srcset attribute in an image tag? Explain the process the browser uses when evaluating the content of this attribute.",
+      "question": "How do you write comments in JavaScript?",
       "answer": [
-        "When you want to serve different images to users depending on their device display width. The browser evaluates the content of the srcset attribute to determine which image to download based on the device's resolution capabilities",
-        "Use: Sending lower resolution to limit data waste and increase performance or sending larger images to a higher resolution display to enhance the UX.",
-        "Example: &lt;img srcset='small.jpg 500w, medium.jpg 1000w, large.jpg 2000w' src='...' alt=''/&gt;"
+        "In JavaScript, you can write single-line comments using '//' and multi-line comments using '/' at the beginning and '/' at the end."
+      ]
+    },
+    {
+      "question": "What is an if statement in JavaScript?",
+      "answer": [
+        "An if statement is used to perform a certain action if a condition is true. It allows you to control the flow of your program based on different conditions."
+      ]
+    },
+    {
+      "question": "How do you loop through an array in JavaScript?",
+      "answer": [
+        "You can loop through an array in JavaScript using a 'for' loop, 'forEach' method, or other loop constructs like 'while' or 'do-while' loop."
+      ]
+    },
+    {
+      "question": "What is a function in JavaScript?",
+      "answer": [
+        "A function in JavaScript is a reusable block of code that performs a specific task. It can be called multiple times with different arguments."
+      ]
+    },
+    {
+      "question": "What is an array in JavaScript?",
+      "answer": [
+        "An array is a data structure in JavaScript that allows you to store multiple values in a single constiable. It is represented by square brackets [] and the values are separated by commas."
+      ]
+    },
+    {
+      "question": "What is JavaScript?",
+      "answer": [
+        "JavaScript is a programming language that enables interactivity on websites. It runs on the client-side, meaning it is executed on the user's web browser."
+      ]
+    },
+    {
+      "question": "What are the advantages of using dot notation to access object properties in JavaScript?",
+      "answer": [
+        "Dot notation provides a more concise and readable way to access object properties. It is also easier to use when the property name is known beforehand."
+      ]
+    },
+    {
+      "question": "When should you use bracket notation to access object properties in JavaScript?",
+      "answer": [
+        "Bracket notation should be used when the property name is dynamically determined or when it contains special characters that are not valid for dot notation."
+      ]
+    },
+    {
+      "question": "Can you give an example of accessing an object property using dot notation in JavaScript?",
+      "answer": [
+        "Sure! Here's an example: 'const person = { name: 'John', age: 25 }; console.log(person.name); // Output: John'"
+      ]
+    },
+    {
+      "question": "Can you give an example of accessing an object property using bracket notation in JavaScript?",
+      "answer": [
+        "Certainly! Here's an example: 'const person = { name: 'John', age: 25 }; console.log(person['name']); // Output: John'"
+      ]
+    },
+    {
+      "question": "Is it possible to access nested object properties using dot notation in JavaScript?",
+      "answer": [
+        "Yes, dot notation can be used to access nested object properties by chaining the property names together. For example: 'const myObj = { prop1: { prop2: 'value' } }; console.log(myObj.prop1.prop2); // Output: value'"
+      ]
+    },
+    {
+      "question": "Is it possible to access nested object properties using bracket notation in JavaScript?",
+      "answer": [
+        "Yes, bracket notation can also be used to access nested object properties. Here's an example: 'const myObj = { prop1: { prop2: 'value' } }; console.log(myObj['prop1']['prop2']); // Output: value'"
+      ]
+    },
+    {
+      "question": "What happens if you try to access a non-existent property using dot notation in JavaScript?",
+      "answer": [
+        "If you try to access a non-existent property using dot notation, you will get 'undefined' as the result."
+      ]
+    },
+    {
+      "question": "What happens if you try to access a non-existent property using bracket notation in JavaScript?",
+      "answer": [
+        "If you try to access a non-existent property using bracket notation, you will also get 'undefined' as the result."
+      ]
+    },
+    {
+      "question": "How can you determine if a property exists in an object in JavaScript?",
+      "answer": [
+        "You can use the 'in' operator or the 'hasOwnProperty()' method to check if a property exists in an object."
+      ]
+    },
+    {
+      "question": "What is object destructuring in JavaScript?",
+      "answer": [
+        "Object destructuring is a feature in JavaScript that allows you to extract properties from an object and assign them to variables in a concise way."
+      ]
+    },
+    {
+      "question": "How can you merge two or more objects in JavaScript?",
+      "answer": [
+        "You can use the 'Object.assign()' method or the spread syntax (...) to merge two or more objects in JavaScript."
+      ]
+    },
+    {
+      "question": "What is the difference between 'call()', 'apply()', and 'bind()' methods in JavaScript?",
+      "answer": [
+        "'call()', 'apply()', and 'bind()' are methods used to set the value of 'this' in a function. 'call()' and 'apply()' invoke the function immediately, while 'bind()' returns a new function with the bound 'this' value."
+      ]
+    },
+    {
+      "question": "What is prototypal inheritance in JavaScript?",
+      "answer": [
+        "Prototypal inheritance is a way of creating objects where objects inherit properties and methods from other objects. It is based on the concept of prototypes."
+      ]
+    },
+    {
+      "question": "How can you create a private variable in JavaScript?",
+      "answer": [
+        "JavaScript doesn't have built-in support for private variables, but you can use closures to achieve privacy by creating a function with a variable that is only accessible within the function."
+      ]
+    },
+    {
+      "question": "What is the event loop in JavaScript?",
+      "answer": [
+        "The event loop is a mechanism in JavaScript that allows for asynchronous execution of code. It handles the execution of tasks in a non-blocking manner, allowing other code to run while waiting for asynchronous operations to complete."
       ]
     }
   ],
-  css: [
+  gitQ: [
     {
-      "question": "What is CSS selector specificity and how does it work?",
-      "answer": [
-        "Explanation: The means by which browsers decide which CSS property values are the most relevant to an element and, therefore, will be applied.",
-        "Use: Specificity is a weight that is applied to a given CSS declaration, determined by the number of each selector type in the matching selector.",
-        "Example: A selector of #id .class tag would have 111 points as id's count for 100, classes for 10 and tags 1."
-      ]
+      "question": "How do you initialize a new Git repository?",
+      "answer": ["git init"]
     },
     {
-      "question": "What's the difference between 'resetting' and 'normalizing' CSS? Which would you choose, and why?",
-      "answer": [
-        "Explanation: 'Normalize' alters the default styles of various browsers to match each other. 'Reset' will remove the browsers default styles so you are starting from scratch.",
-        "Use: Applying one or the other is done to try and make websites visually consistent across different browsers. I prefer to use a mix of both. Starting with the normalize to keep it concise and then add some elements like anchors and headers with a reset. Going full 'nuke' is often unnecessary and creates a larger, harder to debug file."
-      ]
+      "question": "How do you check the status of your Git repository?",
+      "answer": ["git status"]
     },
     {
-      "question": "Describe floats and how they work.",
-      "answer": [
-        "Explanation: Floats are a positioning property where the element that is floated will be removed from the flow of the page and affect the elements around it. A parent element will collapse to zero height if it contains only floated elements, to fix this it was common to use a .clearfix hack.",
-        "Use: It was used prior to flex and grid to layout pages in a more flexible manner.",
-        "Example: You could float three elements left and give them widths of 33% to create three even-width columns."
-      ]
+      "question": "What command is used to stage changes for a commit?",
+      "answer": ["git add"]
     },
     {
-      "question": "Describe z-index and how stacking context is formed.",
-      "answer": [
-        "Explanation: The z-index property in CSS controls the vertical stacking order of elements that overlap. A stacking context is an element that contains a set of layers. The z-index values of its children are set relative to that element rather than to the document root. Layers outside of that context can't sit between layers within it."
-      ]
+      "question": "How do you commit changes in Git?",
+      "answer": ["git commit -m 'Commit message'"]
     },
     {
-      "question": "Describe BFC (Block Formatting Context) and how it works.",
-      "answer": [
-        "Explanation: A BFC is an HTML box that satisfies at least one of the following conditions:",
-        "The value of float is not none.",
-        "The value of position is neither static nor relative.",
-        "The value of display is table-cell, table-caption, inline-block, flex, or inline-flex, grid, or inline-grid.",
-        "The value of overflow is not visible.",
-        "Use: Knowing how to establish a block formatting context is important because, without doing so, the containing box will not contain floated children.",
-        "Example: Without forming a BFC, you could have content of a float that is taller than the content alongside it. The border of the parent element could then 'cut-through' the floated box."
-      ]
+      "question": "What command is used to create a new branch in Git?",
+      "answer": ["git branch <branch_name>"]
     },
     {
-      "question": "What are the various clearing techniques, and which is appropriate for what context?",
-      "answer": [
-        "Explanation:",
-        "  - Empty div method",
-        "  - Clearfix method",
-        "  - overflow: auto or overflow: hidden method",
-        "Use: .clearfix utility class is probably the best method to use in general as it doesn't take long to construct and doesn't suffer from clipping issues like the overflow methods."
-      ]
+      "question": "How do you switch to a different branch in Git?",
+      "answer": ["git checkout <branch_name>"]
     },
     {
-      "question": "Explain CSS sprites, and how you would implement them on a page or site.",
-      "answer": [
-        "Explanation: CSS Sprites are a means of combining multiple images into a single image file for use on a website to help with performance.",
-        "Use: Browsers limit the number of concurrent requests a site can make, so leading several images with a single HTTP request helps increase page load speed.",
-        "Example: An example would be combining press logos for Wired, NY Times, and The Washington Post into a single image file. Then on the site, with CSS, placing the file three times and moving/cropping it to display the applicable logo."
-      ]
+      "question": "How do you merge a branch into the current branch in Git?",
+      "answer": ["git merge <branch_name>"]
     },
     {
-      "question": "How would you approach fixing browser-specific styling issues?",
-      "answer": [
-        "Explanation: There are a handful of ways to solve the issue, such as browser-specific stylesheets, using a library like Bootstrap, etc. My preference would be to use a combination of normalize/reset style sheets. I'd rather use a combination as going full nuke with a reset isn't necessary and makes it a little harder to debug."
-      ]
+      "question": "What command is used to view the commit history in Git?",
+      "answer": ["git log"]
     },
     {
-      "question": "How do you serve your pages for feature-constrained browsers? What techniques/processes do you use?",
-      "answer": [
-          "Explanation: My preference is to try and build lightweight simple websites that incorporate progressive enhancement.",
-          "Use: Build the base level of HTML/CSS with semantics and accessibility in the forefront you get a site that works well on feature-constrained browsers. I would then add any CSS on JavaScript enhancements deliberately, checking caniuse.com and using vendor prefixs and polyfills if required.",
-          "Example: Instead of filling the site with &lt;div/&gt; using more semantically appropriate tags like &lt;section/&gt; &lt;aside/&gt; &lt;article/&gt; &lt;header/&gt; &lt;footer/&gt;"
-      ]
+      "question": "How do you push changes to a remote Git repository?",
+      "answer": ["git push origin <branch_name>"]
     },
     {
-      "question": "What are the different ways to visually hide content (and make it available only for screen readers)?",
-      "answer": [
-          "Explanation: Make the element have a size of zero width: 0; height: 0",
-          "Use: I typically absolutely position the element off screen as it covers the most scenarios."
-      ]
+      "question": "How do you pull changes from a remote Git repository?",
+      "answer": ["git pull origin <branch_name>"]
     },
     {
-      "question": "Have you ever used a grid system, and if so, what do you prefer?",
-      "answer": [
-          "Explanation: I typically use a 12 column 'grid' system when doing my initial web layout.",
-          "Use: I find that it works well for laying out the average website and giving the site some visual consistency. When if comes to coding the site I find it helps speed up the layout immensely."
-      ]
+      "question": "What command is used to discard changes in the working directory?",
+      "answer": ["git checkout -- <file_name>"]
     },
     {
-      "question": "Have you used or implemented media queries or mobile specific layouts/CSS?",
-      "answer": [
-          "Explanation: I use them quite frequently.",
-          "Use: I use them on every website and typically build mobile first. The breakpoints and media queries are then used to convert the layout from mobile to desktop.",
-          "Example: Some examples is changing a bunch of cards from being a single column stack on mobile to a three column layout on desktop."
-      ]
+      "question": "How do you rename a file in Git?",
+      "answer": ["git mv <old_file_name> <new_file_name>"]
     },
     {
-      "question": "Are you familiar with styling SVG?",
-      "answer": [
-          "Explanation: Yes there are a few ways to style them including inline CSS, embedded CSS or an external style sheet. Basic coloring can be done with the fill and stroke attributes.",
-          "Example: &lt;rect width=\"100\" height=\"100\" stroke=\"blue\" fill=\"purple\" /&gt;"
-      ]
+      "question": "What command is used to create a new remote Git repository?",
+      "answer": ["git remote add origin <remote_repository_url>"]
     },
     {
-      "question": "Can you give an example of an @media property other than screen?",
-      "answer": [
-          "Explanation: There are four types: all - for all media type devices, print - for printers, speech - for screenreaders that 'reads' the page out loud, screen - for computer screens, tablets, smartphones, etc.",
-          "Example: @media print { body { color: black; } }"
-      ]
+      "question": "How do you remove a file from Git without deleting it?",
+      "answer": ["git rm --cached <file_name>"]
     },
     {
-      "question": "What are two 'gotchas' for writing efficient CSS?",
-      "answer": [
-          "Explanation: Browsers match selectors from rightmost (key selector) to left. The shorter the length of the chain the faster the browser can find a match. Avoid using tag and universal selectors for your key selector.",
-          "Use: Avoid using styles that trigger reflow."
-      ]
+      "question": "How do you undo the last commit in Git?",
+      "answer": ["git revert HEAD"]
     },
     {
-      "question": "What are the advantages/disadvantages of using CSS preprocessors?",
-      "answer": [
-        "Explanation: Some advantages would be:",
-        "The code is easier to maintain",
-        "More efficient to write with nested selectors",
-        "Mixins can be used for repeated styles",
-        "Ability to split into different files",
-        "Disadvantages would be:",
-        "Additional tooling is required",
-        "You aren't able to use the most current features of standard CSS"
-      ]
+      "question": "What command is used to create a new tag in Git?",
+      "answer": ["git tag <tag_name>"]
     },
     {
-      "question": "Describe what you like and dislike about the CSS preprocessors you have used.",
-      "answer": [
-        "Explanation: I've found that being able to split files and nest selectors is the most useful. A couple of downsides are that debugging is a little more difficult and having to wait for compilation."
-      ]
+      "question": "How do you create a new branch and switch to it in a single command?",
+      "answer": ["git checkout -b <branch_name>"]
     },
     {
-      "question": "How would you implement a web design comp that uses non-standard fonts?",
-      "answer": [
-        "Explanation: Use @font-face and define font-family"
-      ]
+      "question": "What command is used to view the changes between two commits in Git?",
+      "answer": ["git diff <commit_hash_1> <commit_hash_2>"]
     },
     {
-      "question": "Explain how a browser determines what elements match a CSS selector.",
-      "answer": [
-        "Explanation: Browsers match selectors from rightmost (key selector) to left.",
-        "Example: For example with this selector p span, browsers firstly find all the &lt;span/&gt; elements and traverse up its parent all the way up to the root to find the &lt;p/&gt; element. For a particular &lt;span/&gt;, as soon as it finds a &lt;p/&gt;, it knows that the &lt;span/&gt; matches and can stop its matching."
-      ]
-    },
-    {
-      "question": "Describe pseudo-elements and discuss what they are used for.",
-      "answer": [
-        "Explanation & Use: A CSS pseudo-element is a keyword added to a selector that lets you style a specific part of the selected element(s)",
-        "Example: ::first-line can be used to change the font of the first line of a paragraph"
-      ]
-    },
-    {
-      "question": "Explain your understanding of the box model and how you would tell the browser, through CSS, to render your layout in different box models.",
-      "answer": [
-        "Explanation: The CSS box model describes the rectangular boxes that are generated for elements in the document tree and laid out according to the visual formatting model. Each box has a content area and optional surrounding padding, border, and margin areas.",
-        "Use: The standard box model calculates box size by taking a specified height and width, then adding the padding and border. However to change to the alternative box model you would set box-sizing: border-box which allows you to set the box size with height and width."
-      ]
-    },
-    {
-      "question": "What does * { box-sizing: border-box; } do? What are its advantages?",
-      "answer": [
-        "Explanation & Use: It allows you to specify the actual width and height of a box using the width and height properties. This allows you to input true sizes and not have to do any math to take padding and borders into account."
-      ]
-    },
-    {
-      "question": "What is the CSS display property and can you give a few examples of its use?",
-      "answer": [
-        "Explanation & Use: The display CSS property sets whether an element is treated as a block or inline element and the layout used for its children, such as flow layout, grid or flex.",
-        "Example: display: block would make the element consume the whole line width. display: grid would allow you to layout children in a grid system. If you wanted three columns you could pair it with something like grid-template-columns: 1fr 1fr 1fr"
-      ]
-    },
-    {
-      "question": "What's the difference between inline and inline-block?",
-      "answer": [
-        "Explanation:",
-        "inline",
-        "CANNOT specify width and height",
-        "Can only set margin and padding for the sides, not top and bottom.",
-        "inline-block",
-        "CAN specify width and height",
-        "Can set margin and padding on all sides"
-      ]
-    },
-    {
-      "question": "What's the difference between a relative, fixed, absolute and static positioned element?",
-      "answer": [
-        "Explanation:",
-        "Relative - Position is relative to its original static position. Original space on the page is preserved.",
-        "Fixed - Element removed from page flow and placed in a spot relative to the viewport. It won't move when scrolled.",
-        "Absolute - Element removed from page flow and positioned relative to its closest \"positioned\" ancestor. Original space on the page is not preserved",
-        "Static - The default position. top, right, bottom, left and z-index properties do not apply."
-      ]
-    },
-    {
-      "question": "What existing CSS frameworks have you used locally, or in production? How would you change/improve them?",
-      "answer": [
-        "Bootstrap - It takes a while to get the latest CSS features added. Your sites end up looking very similar to others.",
-        "Tailwind - The HTML can feel very cluttered. Reusing styles is a bit clunky."
-      ]
-    },
-    {
-      "question": "Have you played around with the new CSS Flexbox or Grid specs?",
-      "answer": [
-        "Explanation: I have used both flexbox and grid and like to employ both of them.",
-        "Use: I find grid to be useful for the top-level page layout and any elements which have a typical grid layout. I prefer using flexbox for sections and other elements that don't need a rigid grid alignment.",
-        "Example: If I had something like a tic-tac-toe board, I would use grid as it is easy to get the boxes to align and be the same size. If I had some sort of information card with multiple pieces of information, I would likely use flexbox."
-      ]
-    },
-    {
-      "question": "Can you explain the difference between coding a web site to be responsive versus using a mobile-first strategy?",
-      "answer": [
-        "Explanation: Making a website responsive means that some elements will respond by adapting their size or other functionality according to the device's screen size. A mobile-first strategy is also responsive, however, it agrees we should default and define all the styles for mobile devices, and only add specific responsive rules to other devices later.",
-        "Use: You would use media queries to make the above changes at certain screen size breakpoints."
-      ]
-    },
-    {
-      "question": "How is responsive design different from adaptive design?",
-      "answer": "Explanation: Both responsive and adaptive design attempt to optimize the user experience across different devices. Use: Responsive design works on the principle of flexibility - a single fluid website that can look good on any device. Instead of one flexible design, adaptive design detects the device then provides the appropriate feature and layout based on a predefined set of viewport sizes and other characteristics. I believe responsive is the best approach to provide a great experience for all users."
-    },
-    {
-      "question": "Have you ever worked with retina graphics? If so, when and what techniques did you use?",
-      "answer": [
-        "Explanation: Retina is just a marketing term to refer to high resolution screens with a pixel ratio bigger than 1. In order to have crisp, good-looking graphics that make the best of retina displays we need to use high resolution images whenever possible. However using highest resolution images will have an impact on page load times.", 
-        "Use: To overcome this problem, we can use responsive images, as specified in HTML5 with the srcset attribute. Example: &lt;img src=\"/images/test-1600.jpg\" srcset=\"/images/test-400.jpg 400w, /images/test-800.jpg 800w, /images/test-1200.jpg 1200w\"//&gt;"
-      ]
-    },
-    {
-      "question": "Is there any reason you'd want to use translate() instead of absolute positioning, or vice-versa? And why?",
-      "answer": "Explanation: translate() is a value of CSS transform. transform causes the browser to create a GPU layer for the element but changing absolute positioning properties uses the CPU. translate() would be the more efficient solution with shorter paint times. If you do not want the original space of the element preserved you would want to use absolute positioning."
+      "question": "How do you discard all local changes and switch to the latest commit?",
+      "answer": ["git reset --hard HEAD"]
     }
   ],
-  javascript: [
+  pythonP: [
     {
-      "question": "Explain event delegation",
+      "question": "Write a function in Python to check if a number is prime.",
       "answer": [
-        "Explanation: Setting an event listener on a parent element and having events that happen on a child element bubble up to the parent.",
-        "Use: When you want some code to run when the user interacts with any one of a large number of child elements.",
-        "Example:\n\n&lt;div id=\"container\"/&gt;\n  &lt;div class=\"tile\"/&gt;&lt;/div/&gt;\n&lt;/div/&gt;\n&lt;script/&gt;\n  container.addEventListener('click', (event) =/&gt; (event.target.style.backgroundColor = bgChange()));\n&lt;/script/&gt;"
+      "def is_prime(num):\n if num <= 1:\n return False\n for i in range(2, int(num**0.5) + 1):\n if num % i == 0:\n return False\n return True"
       ]
     },
     {
-      "question": "Explain how this works in JavaScript",
+      "question": "How can you find the maximum element in a list using Python?",
       "answer": [
-        "Explanation: this references an object. When inside of a constructor function or class it will reference the object on instantiation.",
-        "Use: It is used to assign properties and values to an object on instantiation.",
-        "Example:\n\nclass MyThing {\n  constructor(passThisIn) {\n    this.passThisIn = passThisIn;\n  }\n}"
+      "max_element = max(your_list)"
       ]
     },
     {
-      "question": "Explain how prototypal inheritance works",
+      "question": "How can you remove all occurrences of a specific value from a list in Python?",
       "answer": [
-        "Explanation: All JavaScript objects have a __proto__ property that is a reference to another object, which is called the object's \"prototype\". If a property is accessed on an object, but not found, the JavaScript engine check's that object prototype. If again it's not found, it checks that prototype's prototype on up the chain until it reaches the top of the chain.",
-        "Use: It can help reduce redundant code.",
-        "Example:\n\nfunction Parent() {\n  this.name = 'Parent';\n}\nParent.prototype.greet = function () {\n  console.log('Hello from ' + Parent.name);\n};\nconst child = Object.create(Parent.prototype);\nchild.cry = function () {\n  console.log('waaaaaahhhh!');\n};\nchild.cry();\n// waaaaaahhhh!\nchild.greet();\n// hello from Parent\nconsole.log(child.constructor);\n// ƒ Parent() {\n// this.name = 'Parent';\n// }\nconsole.log(child.constructor.name);\n// 'Parent'"
+      "your_list = [x for x in your_list if x != value]"
       ]
     },
     {
-      "question": "What do you think of AMD vs CommonJS?",
+      "question": "Write a Python function to reverse a string.",
       "answer": [
-        "Explanation: I would actually prefer to use ESM (ECMAScript Modules) due to its simple syntax and async nature. Historically CommonJS was used in the back end and runs synchronous and AMD was used in the front end and runs asynchronous.",
-        "Use: CJS has been used in Node.js for a while, but the current version of Node now allows the use of ESM."
+      "def reverse_string(string):\n return string[::-1]"
       ]
     },
     {
-      "question": "Explain why the following doesn't work as an IIFE: function foo(){ }(); What needs to be changed to properly make it an IIFE?",
+      "question": "How can you convert a string to an integer in Python?",
       "answer": [
-        "Explanation: The parser reads it as two separate statements. First, the function declaration function foo(){ } and then a blank function call attempt (); The best way to fix this would be to add another set of parentheses wrapping the function declaration (function foo(){ })(). This changes it from a function declaration to a function expression."
+      "integer_value = int(string)"
       ]
     },
     {
-      "question": "What's the difference between a variable that is null, undefined, or undeclared? How would you go about checking for any of these states?",
+      "question": "Write a Python function to calculate the factorial of a number.",
       "answer": [
-        "Explanation:",
-        "null: the value is intentionally absent (points to nothing in memory).",
-        "undefined: not yet assigned a value or not yet declared.",
-        "undeclared: improperly declared without let/const/var",
-        "Use: null can be used to assign the primitive value of null to a variable. undeclared throws an error whereas null and undefined can be checked with a conditional",
-        "Example: null and undefined can be checked using strict equality ===. Undeclared will throw its own error, so you could use try...catch"
+      "def factorial(num):\n if num == 0:\n return 1\n else:\n return num * factorial(num-1)"
       ]
     },
     {
-      "question": "What is a closure, and how/why would you use one?",
+      "question": "Write a Python function to calculate the Fibonacci sequence up to a specified number of terms.",
       "answer": [
-        "Explanation: Closure allows you to use an outer function’s scope (go into a parent, grandparent function, etc.) from within an inner function. In JavaScript, a closure is created every time a function is created.",
-        "Use: It allows you to combine data with the function that will operate on that data. It is similar to OOP.",
-        "Example:",
-        "function init() {",
-        "  var name = 'Mozilla'; // name is a local variable created by init",
-        "  function displayName() {",
-        "    // displayName() is the inner function, a closure",
-        "    alert(name); // use variable declared in the parent function",
-        "  }",
-        "  displayName();",
+      "def fibonacci(n):\n sequence = [0, 1]\n while len(sequence) < n:\n next_num = sequence[-1] + sequence[-2]\n sequence.append(next_num)\n return sequence"
+      ]
+    },
+    {
+      "question": "How can you check if a key exists in a dictionary in Python?",
+      "answer": [
+      "if key in dictionary:"
+      ]
+    },
+    {
+      "question": "Write a Python program to find the sum of all even numbers in a list.",
+      "answer": [
+      "even_sum = sum(num for num in your_list if num % 2 == 0)"
+      ]
+    },
+    {
+      "question": "How can you convert a list to a tuple in Python?",
+      "answer": [
+      "tuple_list = tuple(your_list)"
+      ]
+    },
+    {
+      "question": "Write a Python function to calculate the sum of digits in a number.",
+      "answer": [
+      "def sum_of_digits(num):\n total = 0\n for digit in str(num):\n total += int(digit)\n return total"
+      ]
+    },
+    {
+      "question": "How can you count the frequency of elements in a list in Python?",
+      "answer": [
+      "element_count = your_list.count(element)"
+      ]
+    },
+    {
+      "question": "Write a Python function to check if a number is a palindrome.",
+      "answer": [
+      "def is_palindrome(num):\n num_str = str(num)\n reversed_str = num_str[::-1]\n return num_str == reversed_str"
+      ]
+    },
+    {
+      "question": "Write a Python function to find the largest element in a list.",
+      "answer": [
+      "def find_largest_element(lst):\n if len(lst) == 0:\n return None\n largest = lst[0]\n for num in lst:\n if num > largest:\n largest = num\n return largest"
+      ]
+    },
+    {
+      "question": "Write a Python function to count the number of vowels in a string.",
+      "answer": [
+      "def count_vowels(string):\n count = 0\n vowels = ['a', 'e', 'i', 'o', 'u']\n for char in string:\n if char.lower() in vowels:\n count += 1\n return count"
+      ]
+    },
+    {
+      "question": "Write a Python function to check if a string is a palindrome.",
+      "answer": [
+      "def is_palindrome(string):\n string = string.lower()\n reversed_str = string[::-1]\n return string == reversed_str"
+      ]
+    },
+    {
+      "question": "Write a Python function to check if two strings are anagrams.",
+      "answer": [
+      "def is_anagram(str1, str2):\n str1 = str1.lower().replace(' ', '')\n str2 = str2.lower().replace(' ', '')\n return sorted(str1) == sorted(str2)"
+      ]
+    },
+    {
+      "question": "Write a Python function to find the factorial of a number.",
+      "answer": [
+      "def factorial(num):\n if num == 0:\n return 1\n else:\n return num * factorial(num - 1)"
+      ]
+    },
+    {
+      "question": "Write a Python function to check if a number is prime.",
+      "answer": [
+      "def is_prime(num):\n if num < 2:\n return False\n for i in range(2, int(num**0.5) + 1):\n if num % i == 0:\n return False\n return True"
+      ]
+    },
+    {
+      "question": "Write a Python function to count the occurrences of a specific element in a list.",
+      "answer": [
+      "def count_occurrences(lst, element):\n count = 0\n for item in lst:\n if item == element:\n count += 1\n return count"
+      ]
+    },
+    {
+      "question": "Write a Python function to find the common elements between two lists.",
+      "answer": [
+      "def find_common_elements(lst1, lst2):\n return list(set(lst1) & set(lst2))"
+      ]
+    },
+    {
+      "question": "Write a Python function to remove duplicates from a list.",
+      "answer": [
+      "def remove_duplicates(lst):\n return list(set(lst))"
+      ]
+    },
+    {
+      "question": "Write a Python function to sort a list of dictionaries based on a specific key.",
+      "answer": [
+      "def sort_list_of_dictionaries(lst, key):\n return sorted(lst, key=lambda x: x[key])"
+      ]
+    }
+  ],
+  pythonQ: [
+    {
+      "question": "What is a decorator in Python?",
+      "answer": [
+        "A decorator in Python is a design pattern that allows a user to add new functionality to an existing object or function without modifying its structure. It uses the `@decorator_name` syntax to modify the behavior of the decorated object or function."
+      ]
+    },
+    {
+      "question": "What is the purpose of the `if __name__ == '__main__'` condition in Python?",
+      "answer": [
+        "The `if __name__ == '__main__'` condition is used to ensure that a specific block of code only runs when the script is executed directly and not when it is imported as a module. This condition allows the script to be used as both a standalone program and a reusable module."
+      ]
+    },
+    {
+      "question": "What is the difference between a list and a tuple in Python?",
+      "answer": [
+      "In Python, both lists and tuples are used to store multiple items, but they have some differences. Lists are mutable, meaning you can add, remove, or modify elements after creation. Tuples, on the other hand, are immutable and cannot be changed once created. Lists are represented with square brackets [ ], while tuples use parentheses ( )."
+      ]
+    },
+    {
+      "question": "How do you handle exceptions in Python?",
+      "answer": [
+      "In Python, exceptions are handled using try-except blocks. The code that might raise an exception is placed inside the try block, and the handling of the exception is defined in the except block. If an exception occurs, the code inside the except block is executed. You can also include an optional else block that is executed if no exception occurs, and a finally block that is executed regardless of whether an exception occurred or not."
+      ]
+    },
+    {
+      "question": "What is a lambda function in Python?",
+      "answer": [
+      "A lambda function in Python is an anonymous function that can be defined without a name. It is created using the lambda keyword, followed by a list of arguments, a colon, and the expression to be evaluated. Lambda functions are often used as one-liners for simple operations or as arguments to higher-order functions."
+      ]
+    },
+    {
+      "question": "How do you open and read a file in Python?",
+      "answer": [
+      "To open and read a file in Python, you can use the open() function. It takes the file path as the argument and returns a file object. You can then use various methods on the file object, such as read(), readline(), or readlines(), to read the contents of the file."
+      ]
+    },
+    {
+      "question": "What is the difference between == and is operators in Python?",
+      "answer": [
+      "In Python, the == operator is used to compare the values of two objects for equality. It checks if the values are the same. On the other hand, the is operator is used to compare the identity of two objects. It checks if the objects refer to the same memory location. While == compares values, is compares identities."
+      ]
+    },
+    {
+      "question": "What are generators in Python?",
+      "answer": [
+      "Generators in Python are a type of iterable, similar to lists or tuples. However, unlike lists, which store all the values in memory, generators generate the values on-the-fly as they are requested. They use the yield keyword instead of return to create iterable functions. Generators are memory-efficient and can be used to iterate over large datasets or infinite sequences."
+      ]
+    },
+    {
+      "question": "How do you sort a list in Python?",
+      "answer": [
+      "To sort a list in Python, you can use the sort() method or the sorted() function. The sort() method modifies the original list in-place and arranges the elements in ascending order. The sorted() function returns a new sorted list without modifying the original list. Both methods allow you to specify additional parameters for custom sorting criteria."
+      ]
+    },
+    {
+      "question": "What is a virtual environment in Python?",
+      "answer": [
+      "A virtual environment in Python is a self-contained directory that contains a Python interpreter and a set of installed packages. It allows you to create isolated environments for different projects, with their own dependencies and versions. Virtual environments are used to avoid conflicts between packages and provide a clean and reproducible development environment."
+      ]
+    },
+    {
+      "question": "What are docstrings in Python?",
+      "answer": [
+      "Docstrings in Python are used to document functions, classes, and modules. They are enclosed in triple quotes (''' or \"\"\") and provide a way to describe the purpose, usage, and parameters of the code. Docstrings can be accessed using the __doc__ attribute and are commonly used for generating documentation automatically."
+      ]
+    },
+    {
+      "question": "What is the purpose of the yield keyword in Python?",
+      "answer": [
+      "The yield keyword in Python is used in the context of generators. It is used to define a generator function, which is a special kind of iterator. When a generator function is called, it returns an iterator object that can be iterated over using a for loop or other iteration constructs. The yield keyword is used to yield values one at a time from the generator function, allowing lazy evaluation of elements in a sequence."
+      ]
+    },
+    {
+      "question": "How do you define a class in Python?",
+      "answer": [
+      "To define a class in Python, you use the class keyword followed by the class name and a colon. The class body is indented, and within the class, you can define attributes (variables) and methods (functions) that define the behavior of the class."
+      ]
+    },
+    {
+      "question": "What is the difference between instance variables and class variables in Python?",
+      "answer": [
+      "In Python, instance variables are specific to each instance (object) of a class. They are defined within methods or the constructor using the self keyword. Each instance has its own copy of instance variables. On the other hand, class variables are shared among all instances of a class. They are defined outside any method and are accessible using the class name. All instances of the class share the same class variables."
+      ]
+    },
+    {
+      "question": "What is the purpose of the __init__ method in Python classes?",
+      "answer": [
+      "The __init__ method in Python classes is a special method that gets called automatically when an object is created from a class. It is used to initialize the attributes of the object. The self parameter refers to the instance of the object being created, and you can use it to set initial values for the object's attributes."
+      ]
+    },
+    {
+      "question": "What is the purpose of the pass statement in Python?",
+      "answer": [
+      "The pass statement in Python is a placeholder statement that does nothing. It is used when a statement is syntactically required but you don't want to perform any action. It is commonly used as a placeholder in empty function or class definitions, or in conditional statements or loops where no action is needed in a particular branch or iteration."
+      ]
+    },
+    {
+      "question": "What is the purpose of the with statement in Python?",
+      "answer": [
+      "The with statement in Python is used for context management. It provides a convenient way to handle resources such as files or network connections that need to be properly managed and cleaned up after use. The with statement automatically takes care of opening and closing the resource, even if an exception occurs. It ensures that resources are released in a timely manner and helps prevent resource leaks."
+      ]
+    },
+    {
+      "question": "What is the difference between shallow copy and deep copy in Python?",
+      "answer": [
+      "In Python, a shallow copy of an object creates a new object that references the same memory as the original object. If the original object contains mutable elements, changes made to those elements will be reflected in both the original and copied objects. In contrast, a deep copy creates a new object and recursively copies all the objects it contains. The copied object is completely independent of the original object, and changes made to the original or copied object do not affect each other."
+      ]
+    },
+    {
+      "question": "How does exception handling work in Python?",
+      "answer": [
+      "Exception handling in Python is a mechanism that allows you to handle errors and exceptional situations in your code. It involves the use of try-except blocks, where you place the code that might raise an exception inside the try block and provide the handling code in the except block to handle the exception if it occurs."
+      ]
+    },
+    {
+      "question": "What is the Global Interpreter Lock (GIL) in Python?",
+      "answer": [
+      "The Global Interpreter Lock (GIL) is a mechanism used in the CPython implementation of Python. It is a lock that ensures only one thread executes Python bytecode at a time. This means that even on multi-core systems, Python threads cannot fully utilize multiple cores for CPU-bound tasks. However, the GIL does not affect the performance of I/O-bound tasks."
+      ]
+    },
+    {
+      "question": "What is metaprogramming in Python?",
+      "answer": [
+      "Metaprogramming in Python is a technique where a program can modify or generate code dynamically at runtime. It allows you to write code that can inspect and manipulate other code, such as creating classes and functions programmatically or modifying their behavior. Python provides several features like decorators, metaclasses, and the 'exec' function to support metaprogramming."
+      ]
+    },
+    {
+      "question": "What are context managers in Python?",
+      "answer": [
+      "Context managers in Python are objects that define the methods 'enter' and 'exit', which allow them to be used with the 'with' statement. They provide a convenient way to manage resources, such as files or network connections, by automatically acquiring and releasing them. The 'enter' method is called when entering the 'with' block, and the 'exit' method is called when exiting the block, even if an exception occurs."
+      ]
+    },
+    {
+      "question": "What are Python closures?",
+      "answer": [
+      "Python closures are functions that remember and access variables from the enclosing lexical scope, even when they are called outside that scope. In other words, a closure is a function object that has access to variables in its own scope, the scope of the enclosing function, and global variables. Closures are created when a nested function references a variable from its containing function."
+      ]
+    },
+    {
+      "question": "What is monkey patching in Python?",
+      "answer": [
+      "Monkey patching in Python refers to the practice of modifying or extending code at runtime, typically by adding, modifying, or replacing methods or attributes of existing classes or objects. It allows you to change the behavior of code without modifying its original source code. Monkey patching can be a powerful technique but should be used with caution as it can make code harder to understand and maintain."
+      ]
+    },  
+    {
+      "question": "What is the Global Namespace and Local Namespace in Python?",
+      "answer": [
+      "In Python, the global namespace refers to the namespace that contains names defined at the top level of a module or script. It is accessible throughout the module or script. On the other hand, the local namespace refers to the namespace created when a function is called. It contains names defined within the function's scope and is destroyed when the function returns."
+      ]
+    },  
+    {
+      "question": "What is the purpose of the 'name' variable in Python?",
+      "answer": [
+      "The 'name' variable in Python is a special variable that holds the name of the current module or script. When a module is imported, 'name' is set to the module's name. However, if the module is executed as the main script, 'name' is set to 'main'. This allows you to write code that will only be executed when the module is run directly and not when it is imported by another module."
+      ]
+    },
+    {
+      "question": "What are the differences between list comprehension and generator expression in Python?",
+      "answer": [
+      "List comprehension and generator expression are both constructs in Python used to create new sequences based on existing sequences. List comprehension returns a new list by iterating over an existing sequence and applying an expression to each element. Generator expression, on the other hand, returns an iterator that generates the elements on-the-fly as they are needed, without creating a new list in memory. Generator expressions are more memory-efficient for large sequences."
+      ]
+    },
+    {
+      "question": "What is the purpose of the 'else' clause in a 'for' loop in Python?",
+      "answer": [
+      "In Python, the 'else' clause in a 'for' loop is optional and is executed when the loop completes all its iterations without encountering a 'break' statement. It allows you to specify code that should be executed if the loop completes normally. The 'else' clause is not executed if the loop is terminated by a 'break' statement."
+      ]
+    },
+    {
+      "question": "What are some differences between sets and frozensets in Python?",
+      "answer": [
+      "Sets and frozensets are both unordered collections of unique elements in Python. The main difference is that sets are mutable, while frozensets are immutable. This means that you can add, remove, or modify elements in a set, but you cannot do so in a frozenset. Sets are useful for storing and manipulating data, while frozensets are useful when you need an immutable set that can be used as a dictionary key or an element in another set."
+      ]
+    }
+  ],
+  cP: [
+    {
+      "question": "Write a function to calculate the factorial of a number.",
+      "answer": [
+        "#include <stdio.h>",
+        "int factorial(int n) {",
+        "    if (n <= 1)",
+        "        return 1;",
+        "    else",
+        "        return n * factorial(n - 1);",
         "}",
-        "init();"
       ]
     },
     {
-      "question": "Can you describe the main difference between a .forEach() loop and a .map() loop and why you would pick one versus the other?",
+      "question": "Write a program to check if a number is prime or not.",
       "answer": [
-        "Explanation: .forEach() executes a callback function on each element, but does not return a value. .map() executes a callback function on each element and 'maps' the result to a new array. The new array is returned.",
-        "Use: If you need the result and don't want to mutate the original array, use map. If you only need to iterate over the array, then forEach can be used.",
-        "Example: .forEach():",
-        "const a = [1, 2, 3];",
-        "const doubled = a.forEach((num, index) =/&gt; {",
-        "  // Do something with num and/or index.",
-        "});",
-        "// doubled = undefined",
-        ".map():",
-        "const a = [1, 2, 3];",
-        "const doubled = a.map((num) =/&gt; {",
-        "  return num * 2;",
-        "});",
-        "// doubled = [2, 4, 6]"
+      "#include <stdio.h>",
+      "int isPrime(int n) {",
+      " if (n <= 1)",
+      "   return 0;",
+      " for (int i = 2; i * i <= n; i++) {",
+      "     if (n % i == 0)",
+      "        return 0;",
+      "   }",
+      " return 1;",
+      "}"
       ]
     },
     {
-      "question": "What's a typical use case for anonymous functions?",
+      "question": "Write a function to reverse a string.",
       "answer": [
-        "Explanation: I've typically encountered them as callback functions that don't need to be used anywhere else.",
-        "Use: Essentially when you don't need a named function and the function is bound to some other action.",
-        "Example:",
-        "setTimeout(function () {",
-        "  console.log('Hello world!');",
-        "}, 1000)"
+      "#include <stdio.h>",
+      "#include <string.h>",
+      "void reverseString(char* str) {",
+      " int left = 0;",
+      " int right = strlen(str) - 1;",
+      " while (left < right) {",
+      "     char temp = str[left];",
+      "     str[left] = str[right];",
+      "     str[right] = temp;",
+      "     left++;",
+      "     right--;",
+      "   }",
+      "}"
       ]
     },
     {
-      "question": "How do you organize your code? (module pattern, classical inheritance?)",
+      "question": "Write a program to find the sum of all elements in an array.",
       "answer": [
-        "Explanation: My preference is to use ES6 Modules to organize my code for the following reasons:",
-        "Easier to reuse code",
-        "You can keep different parts of your code cleanly separated, which makes writing and maintaining your code much easier and less error-prone."
+      "#include <stdio.h>",
+      "int arraySum(int arr[], int size) {",
+      " int sum = 0;",
+      " for (int i = 0; i < size; i++) {",
+      "     sum += arr[i];",
+      "   }",
+      " return sum;",
+      "}"
       ]
     },
     {
-      "question": "What's the difference between host objects and native objects?",
+      "question": "Write a program to find the largest element in an array.",
       "answer": [
-        "Explanation: Native objects are part of the language as defined by the ECMAScript specification. Host objects are those provided by the runtime (browser or Node).",
-        "Example: Some native objects are String, Math, RegExp, and Object. A couple of host objects are window and console"
+      "#include <stdio.h>",
+      "int findLargest(int arr[], int size) {",
+      " int largest = arr[0];",
+      " for (int i = 1; i < size; i++) {",
+      "     if (arr[i] > largest) {",
+      "         largest = arr[i];",
+      "   }",
+      " }",
+      " return largest;",
+      "}"
       ]
     },
     {
-      "question": "What is the difference between: function Person(){}, var person = Person(), and var person = new Person()?",
+      "question": "Write a program to count the number of vowels in a string.",
       "answer": [
-        "Explanation & Use:",
-        "function Person(){} is likely being used as a constructor.",
-        "var person = new Person() is instantiated a new Person object as person.",
-        "var person = Person() is not correct and would likely return undefined. To create a new instance you would need to use the new operator as above.",
-        "Example:",
-        "function Person(name) {",
-        "  this.name = name;",
-        "}",
-        "var person = Person('John');",
-        "console.log(person); // undefined",
-        "console.log(person.name); // Uncaught TypeError: Cannot read property 'name' of undefined",
-        "var person = new Person('John');",
-        "console.log(person); // Person { name: 'John' }",
-        "console.log(person.name); // 'John'"
+      "#include <stdio.h>",
+      "#include <string.h>",
+      "int countVowels(char* str) {",
+      " int count = 0;",
+      " int length = strlen(str);",
+      " for (int i = 0; i < length; i++) {",
+      "   char ch = tolower(str[i]);",
+      "   if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {",
+      "       count++;",
+      "   }",
+      " }",
+      " return count;",
+      "}"
       ]
     },
     {
-      "question": "What's the difference between .call() and .apply()?",
+      "question": "Write a program to find the Fibonacci series up to a given number.",
       "answer": [
-        "Explanation: They are both used to invoke functions, the difference is in how they take arguments. .call() takes them as comma-separated values and .apply() takes them as an array."
+      "#include <stdio.h>",
+      "void fibonacciSeries(int n) {",
+      " int first = 0, second = 1;",
+      " printf(\"Fibonacci series up to %d:\n\", n);",
+      " printf(\"%d, %d, \", first, second);",
+      " int next;",
+      " while (1) {",
+      "     next = first + second;",
+      "     if (next > n) break;",
+      "         first = second;",
+      "         second = next;",
+      "     }",
+      "     printf(\"\n\");",
+      "}"
       ]
     },
     {
-      "question": "Explain Function.prototype.bind.",
+      "question": "Write a program to check if a string is a palindrome.",
       "answer": [
-        "Explanation: Creates a new function that, when called, has its 'this' keyword set to the provided value.",
-        "Use: For binding the value of 'this' in methods of classes that you want to pass into other functions. This is frequently done in React components."
+      "#include <stdio.h>",
+      "#include <string.h>",
+      "#include <stdbool.h>",
+      "bool isPalindrome(char* str) {",
+      " int left = 0;",
+      " int right = strlen(str) - 1;",
+      " while (left < right) {",
+      "     if (str[left] != str[right]) {",
+      "         return false;",
+      "      }",
+      "      left++;",
+      "     right--;",
+      "  }",
+      " return true;",
+      "}"
       ]
     },
     {
-      "question": "When would you use document.write()?",
+      "question": "Write a program to find the factorial of a number using recursion.",
       "answer": [
-        "Explanation: It is usually considered dangerous and prone to misuse. I would not use it in a modern-day website."
+      "#include <stdio.h>",
+      "int factorial(int n) {",
+      " if (n <= 1)",
+      "     return 1;",
+      " else",
+      " return n * factorial(n - 1);",
+      "}"
       ]
     },
     {
-      "question": "What's the difference between feature detection, feature inference, and using the UA string?",
+      "question": "Write a program to find the sum of all even numbers between 1 and n.",
       "answer": [
-        "Explanation:",
-        "Feature Detection: Working out whether a browser supports a certain block of code, and running different code depending on whether it does, so that the browser can provide a working experience rather crashing/erroring in some browsers.",
-        "Feature Inference: Checks for a feature just like feature detection, but uses another function because it assumes it will also exist. Feature Detection is the better approach.",
-        "UA String: A browser-reported string that allows the network protocol peers to identify various properties of the system. It's tricky to parse and can be spoofed, so it's best to avoid this method.",
-        "Example: Example: Using feature detection:\n\nif ('geolocation' in navigator) {\n  // Can use navigator.geolocation\n} else {\n  // Handle lack of feature\n}"
+      "#include <stdio.h>",
+      "int sumOfEvenNumbers(int n) {",
+      " int sum = 0;",
+      " for (int i = 2; i <= n; i += 2) {",
+      "     sum += i;",
+      " }",
+      " return sum;",
+      "}"
       ]
     },
     {
-      "question": "Explain Ajax in as much detail as possible.",
+      "question": "Write a program to find the GCD (Greatest Common Divisor) of two numbers.",
       "answer": [
-        "Explanation: Ajax (asynchronous JavaScript and XML) is a set of web development techniques using many web technologies on the client side to create asynchronous web applications. With Ajax, web applications can send data to and retrieve from a server asynchronously (in the background) without interfering with the display and behavior of the existing page.",
-        "Use: By decoupling the data interchange layer from the presentation layer, Ajax allows for web pages, and by extension web applications, to change content dynamically without the need to reload the entire page. In practice, modern implementations commonly use JSON instead of XML, due to the advantages of JSON being native to JavaScript.",
-        "Example: The fetch API is typically used nowadays for asynchronous communication."
-      ]
-    },
-    {
-      "question": "What are the advantages and disadvantages of using Ajax?",
-      "answer": [
-        "Advantages:",
-        "Better interactivity. New content from the server can be changed dynamically without the need to reload the entire page.",
-        "Reduce connections to the server since scripts and stylesheets only have to be requested once.",
-        "State can be maintained on a page. JavaScript variables and DOM state will persist because the main container page was not reloaded.",
-        "Disadvantages:",
-        "Dynamic webpages are harder to bookmark.",
-        "Does not work if JavaScript has been disabled in the browser.",
-        "Some web crawlers do not execute JavaScript and would not see content that has been loaded by JavaScript.",
-        "JavaScript will have to be parsed and executed on the browser, and low-end mobile devices might struggle with this."
-      ]
-    },
-    {
-      "question": "Explain how JSONP works (and how it's not really Ajax).",
-      "answer": [
-        "Explanation: JSONP (JSON with Padding) is a method commonly used to bypass the cross-domain policies in web browsers because Ajax requests from the current page to a cross-origin domain is not allowed.",
-        "Use: JSONP can be unsafe as it can do everything else JavaScript can, so you need to trust the provider of data. These days, CORS is the recommended approach, and JSONP is seen as a hack.",
-        "Example:",
-        "&lt;!-- https://mydomain.com --/&gt;",
-        "&lt;script/&gt;",
-        "  function printData(data) {",
-        "    console.log(`My name is ${data.name}!`);",
-        "  }",
-        "&lt;/script/&gt;",
-        "&lt;script src='https://example.com?callback=printData'/&gt;&lt;/script/&gt;"
-      ]
-    },
-    {
-      "question": "Have you ever used JavaScript templating? If so, what libraries have you used?",
-      "answer": [
-        "Explanation: The only one I've used is JSX in React, which I don't think it's quite JavaScript templating.",
-        "Use: It's more of an extension to ECMAScript that allows you to easily structure components with familiar HTML syntax.",
-        "Example:",
-        "const name = 'Josh Perez';",
-        "const element = &lt;h1/&gt;Hello, {name}&lt;/h1/&gt;;"
+      "#include <stdio.h>",
+      "int gcd(int a, int b) {",
+      " if (b == 0)",
+      "     return a;",
+      " return gcd(b, a % b);",
+      "}"
       ]
     }
   ],
-  github: [
-      {
+  cQ: [
+    {
+      "question": "What is the syntax for declaring a variable in C?",
+      "answer": [
+      "In C, variables are declared using the following syntax: data_type variable_name;",
+      "For example, to declare an integer variable named 'num', you would write: int num;",
+      "You can also initialize a variable at the time of declaration, like this: data_type variable_name = initial_value;",
+      "For example, to declare and initialize an integer variable named 'count' with a value of 0, you would write: int count = 0;"
+      ]
+    },
+    {
+      "question": "How do you define a function in C?",
+      "answer": [
+      "To define a function in C, you use the following syntax:",
+      "return_type function_name(parameter_list) {",
+      " // function body",
+      " // statements",
+      "}",
+      "The return_type is the data type of the value that the function returns. If the function doesn't return a value, you can use the 'void' keyword as the return_type.",
+      "The function_name is the name of the function, which you can choose as per your preference.",
+      "The parameter_list contains the data types and names of the parameters the function accepts, separated by commas.",
+      "Inside the function body, you write the statements that define the functionality of the function."
+      ]
+    },
+    {
+      "question": "What is the syntax for a for loop in C, and what is its purpose?",
+      "answer": [
+      "The syntax for a for loop in C is as follows:",
+      "for (initialization; condition; increment/decrement) {",
+      " // loop body",
+      " // statements",
+      "}",
+      "The initialization is an expression that sets the loop control variable to an initial value.",
+      "The condition is a boolean expression that is evaluated before each iteration. If the condition is true, the loop body is executed; otherwise, the loop is terminated.",
+      "The increment/decrement is an expression that updates the loop control variable after each iteration.",
+      "Inside the loop body, you write the statements that are executed repeatedly until the condition becomes false."
+      ]
+    },
+    {
+      "question": "What is the syntax for a while loop in C, and what is its purpose?",
+      "answer": [
+      "The syntax for a while loop in C is as follows:",
+      "while (condition) {",
+      " // loop body",
+      " // statements",
+      "}",
+      "The condition is a boolean expression that is evaluated before each iteration. If the condition is true, the loop body is executed; otherwise, the loop is terminated.",
+      "Inside the loop body, you write the statements that are executed repeatedly until the condition becomes false."
+      ]
+    },
+    {
+      "question": "What is the syntax for a do-while loop in C, and what is its purpose?",
+      "answer": [
+      "The syntax for a do-while loop in C is as follows:",
+      "do {",
+      " // loop body",
+      " // statements",
+      "} while (condition);",
+      "The loop body is executed at least once before the condition is checked.",
+      "If the condition is true, the loop body is executed repeatedly; otherwise, the loop is terminated.",
+      "Inside the loop body, you write the statements that are executed repeatedly until the condition becomes false."
+      ]
+    },
+    {
+      "question": "What is the syntax for a switch statement in C, and what is its purpose?",
+      "answer": [
+      "The syntax for a switch statement in C is as follows:",
+      "switch (expression) {",
+      " case constant1:",
+      " // statements",
+      " break;",
+      " case constant2:",
+      " // statements",
+      " break;",
+      " // more cases",
+      " default:",
+      " // statements",
+      "}",
+      "The switch statement evaluates the expression and compares it to the constants specified in each case.",
+      "If a case matches the expression, the statements inside that case are executed until a break statement is encountered.",
+      "If no case matches the expression, the statements inside the default case are executed.",
+      "The break statement is used to exit the switch statement and prevent execution of the subsequent cases."
+      ]
+    },
+    {
+      "question": "What is the syntax for a structure in C, and what is its purpose?",
+      "answer": [
+      "In C, a structure is defined using the following syntax:",
+      "struct struct_name {",
+      " data_type1 member1;",
+      " data_type2 member2;",
+      " // more members",
+      "};",
+      "The struct_name is the name you give to the structure.",
+      "Inside the structure, you define member variables with their respective data types.",
+      "To declare a variable of the structure type, you can use 'struct struct_name variable_name;'",
+      "You can access the members of a structure using the dot (.) operator, like 'variable_name.member_name;'"
+      ]
+    },
+    {
+      "question": "What is the syntax for an if-else statement in C, and what is its purpose?",
+      "answer": [
+      "The syntax for an if-else statement in C is as follows:",
+      "if (condition) {",
+      " // statements executed if condition is true",
+      "} else {",
+      " // statements executed if condition is false",
+      "}",
+      "The condition is a boolean expression that is evaluated.",
+      "If the condition is true, the statements inside the if block are executed.",
+      "If the condition is false, the statements inside the else block (if present) are executed."
+      ]
+    },
+    {
+      "question": "What is the syntax for a break statement in C, and what is its purpose?",
+      "answer": [
+      "The syntax for a break statement in C is as follows:",
+      "break;",
+      "The break statement is used to exit from a loop or switch statement.",
+      "When a break statement is encountered, the control jumps to the end of the loop or switch statement.",
+      "It is commonly used to terminate a loop prematurely or to exit a switch statement after a case is matched."
+      ]
+    },
+    {
+      "question": "What is the syntax for a continue statement in C, and what is its purpose?",
+      "answer": [
+      "The syntax for a continue statement in C is as follows:",
+      "continue;",
+      "The continue statement is used to skip the remaining statements in the current iteration of a loop.",
+      "When a continue statement is encountered, the control jumps to the beginning of the next iteration.",
+      "It is commonly used to skip specific iterations based on certain conditions."
+      ]
+    },
+    {
+      "question": "What is the syntax for a function pointer in C, and what is its purpose?",
+      "answer": [
+      "In C, a function pointer is declared using the following syntax:",
+      "return_type (pointer_name)(parameter_list);",
+      "The pointer_name is the name you give to the function pointer.",
+      "The return_type is the data type of the value that the function returns.",
+      "The parameter_list contains the data types and names of the parameters the function accepts, separated by commas.",
+      "To assign a function to a function pointer, you can use the address-of operator (&) before the function name.",
+      "For example: pointer_name = &function_name;",
+      "To call a function through a function pointer, you can use the dereference operator () before the function pointer name.",
+      "For example: (*pointer_name)(arguments);"
+      ]
+    },
+    {
+      "question": "How do you define a constant in C, and what is its purpose?",
+      "answer": [
+      "In C, you can define a constant using the 'const' keyword.",
+      "The syntax for declaring a constant is: const data_type constant_name = value;",
+      "For example, to define a constant integer named 'MAX_SIZE' with a value of 100, you would write: const int MAX_SIZE = 100;"
+      ]
+    },
+    {
+      "question": "What are the basic data types in C, and what are there purposes?",
+      "answer": [
+      "C provides several basic data types, including:",
+      "1. int: used for integers, such as 10 or -5.",
+      "2. float: used for single-precision floating-point numbers, such as 3.14 or -0.5.",
+      "3. double: used for double-precision floating-point numbers, providing higher precision than float.",
+      "4. char: used for individual characters, such as 'a' or '7'.",
+      "5. void: used to indicate an empty or unknown type.",
+      "These are some of the common data types in C, and there are additional data types as well."
+      ]
+    },
+    {
+      "question": "What is the syntax for a function declaration in C?",
+      "answer": [
+      "To declare a function in C, you use the following syntax:",
+      "return_type function_name(parameter1_type parameter1, parameter2_type parameter2, ...);",
+      "For example, to declare a function named 'add' that takes two integers as parameters and returns an integer, you would write: int add(int num1, int num2);",
+      "Note that the function declaration ends with a semicolon."
+      ]
+    },
+    {
+      "question": "How do you define a function in C?",
+      "answer": [
+      "To define a function in C, you use the following syntax:",
+      "return_type function_name(parameter1_type parameter1, parameter2_type parameter2, ...)",
+      "{",
+      " // Function body",
+      " // Statements to be executed",
+      " // Return statement",
+      "}",
+      "For example, to define the 'add' function mentioned earlier, you would write:",
+      "int add(int num1, int num2)",
+      "{",
+      " int sum = num1 + num2;",
+      " return sum;",
+      "}"
+      ]
+    },
+    {
+      "question": "How do you take input from the user in C?",
+      "answer": [
+      "To take input from the user in C, you can use the 'scanf' function.",
+      "The syntax for reading input using 'scanf' is:",
+      "scanf('format_string', &variable1, &variable2, ...);",
+      "The 'format_string' specifies the type of input to be read, and the '&' symbol is used to get the address of the variables.",
+      "For example, to read an integer from the user and store it in a variable 'num', you can write:",
+      "int num;",
+      "scanf('%d', &num);",
+      "Note that you need to include the 'stdio.h' header file at the beginning of your program to use 'scanf'."
+      ]
+    },
+    {
+      "question": "How do you define and access an array in C, and what is its purpose?",
+      "answer": [
+      "In C, an array is a collection of elements of the same type stored in contiguous memory locations.",
+      "To define an array, you use the following syntax:",
+      "data_type array_name[size];",
+      "For example, to define an array of integers named 'numbers' with a size of 5, you can write:",
+      "int numbers[5];",
+      "To access elements of an array, you use the index inside square brackets, starting from 0.",
+      "For example, to access the third element of the 'numbers' array, you can write:",
+      "int x = numbers[2];",
+      "Note that arrays in C are zero-indexed."
+      ]
+    },
+    {
+      "question": "What is the syntax for a 'continue' statement in C, and what is its purpose?",
+      "answer": [
+      "The 'continue' statement in C is used to skip the remaining code inside a loop and move to the next iteration.",
+      "The syntax for the 'continue' statement is simply:",
+      "continue;",
+      "When 'continue' is encountered inside a loop, the control flow jumps to the next iteration, skipping any code below it in the loop.",
+      "For example, in a 'for' loop, you can use 'continue' to skip printing even numbers:",
+      "for (int i = 1; i <= 10; i++)",
+      "{",
+      " if (i % 2 == 0)",
+      " {",
+      " continue;",
+      " }",
+      " printf('%d\n', i);",
+      "}"
+      ]
+    },
+    {
+      "question": "What is malloc, and what is its purpose?",
+      "answer": [
+      "In the C programming language, malloc is a library function used to dynamically allocate memory during runtime. Its purpose is to allocate a specified number of bytes in the heap memory and return a pointer to the beginning of the allocated memory block. This memory can be accessed and utilized by the program until it is explicitly freed using the free function. malloc is commonly used when the exact memory requirements of a program are not known at compile-time or when memory needs to be allocated and deallocated dynamically during program execution."
+      ]
+    },
+    {
+      "question": "What is the difference between malloc and calloc in C?",
+      "answer": [
+      "In C, malloc and calloc are both library functions used for dynamic memory allocation, but they have some differences. malloc is used to allocate a specified number of bytes in the heap memory and returns a pointer to the beginning of the allocated memory block. It does not initialize the allocated memory, so the contents of the memory block are undefined until explicitly set by the program.",
+      "On the other hand, calloc is also used for dynamic memory allocation, but it initializes the allocated memory to zero. It takes two arguments: the number of elements to allocate and the size of each element. The total amount of memory allocated by calloc is the product of these two values. The memory returned by calloc is guaranteed to be initialized to zero, which can be useful in certain scenarios.",
+      "In summary, malloc allocates memory without initializing it, while calloc allocates and initializes memory to zero."
+      ]
+    },
+    {
+      "question": "What is the purpose of the realloc function in C?",
+      "answer": [
+      "In C, the realloc function is used to change the size of a previously allocated memory block. It takes two arguments: a pointer to the previously allocated memory block and the new size in bytes. The realloc function performs the following actions:",
+      "1. If the pointer is NULL, realloc behaves like malloc and allocates a new memory block of the specified size.",
+      "2. If the new size is smaller than the original size, realloc truncates the memory block to the new size, discarding the excess bytes.",
+      "3. If the new size is larger than the original size, realloc attempts to extend the memory block. If there is sufficient adjacent free memory, it may be able to accomplish this without moving the data. Otherwise, realloc allocates a new memory block, copies the contents of the old block to the new block, and frees the old block.",
+      "4. If realloc fails to allocate the requested memory, it returns NULL, and the original memory block remains unchanged.",
+      "The realloc function is useful when the size of a dynamically allocated memory block needs to be adjusted during program execution."
+      ]
+    },
+    {
+      "question": "What is the difference between stack and heap memory in C?",
+      "answer": [
+      "In C, stack and heap are two distinct regions of memory used for different purposes:",
+      "1. Stack memory is used for storing local variables, function call information, and other data related to function execution. It is organized in a Last-In-First-Out (LIFO) structure, meaning the most recently allocated memory is the first to be deallocated. The size of the stack is typically fixed and limited, determined by the operating system or compiler settings.",
+      "2. Heap memory, on the other hand, is used for dynamic memory allocation. It allows for the allocation and deallocation of memory blocks during runtime using functions like malloc, calloc, and realloc. The size of the heap is typically much larger than the stack and can grow or shrink as needed during program execution.",
+      "In summary, stack memory is used for local variables and has a fixed size, while heap memory is used for dynamic memory allocation and has a larger size that can change during program execution."
+      ]
+    },
+    {
+      "question": "What is a pointer in C?",
+      "answer": [
+      "In C, a pointer is a variable that holds the memory address of another variable. It allows indirect access to the memory location and the value stored at that location. Pointers are often used for dynamic memory allocation, accessing arrays, implementing data structures, and interacting with hardware.",
+      "To declare a pointer in C, the asterisk (*) symbol is used. For example, int ptr; declares a pointer variable named ptr that can store the memory address of an integer variable.",
+      "Pointers can be manipulated using various operators, such as the dereference operator () to access the value at the memory address pointed to by the pointer, and the address-of operator (&) to get the memory address of a variable.",
+      "Using pointers requires careful management to avoid errors like accessing invalid memory locations or causing memory leaks."
+      ]
+    },
+    {
+      "question": "What is the purpose of the sizeof operator in C?",
+      "answer": [
+      "In C, the sizeof operator is used to determine the size in bytes of a type or a variable. It is a compile-time unary operator that returns the size as a constant of type size_t.",
+      "The sizeof operator can be used with various operands:",
+      "- sizeof(type): Returns the size of the specified type.",
+      "- sizeof(expression): Returns the size of the evaluated expression.",
+      "- sizeof(variable): Returns the size of the variable's type.",
+      "The size calculated by sizeof depends on the implementation and the target architecture. It allows programs to work with types and variables in a more flexible and portable manner, ensuring that the correct amount of memory is allocated or accessed."
+      ]
+    }
+  ]
+}
 
-      }
-    ]
-};
-
-export default questionsAnswers;
-
+export default questionsAnswers
