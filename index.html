@@ -24,30 +24,47 @@
           <p id="question"></p>
           <button id="answer-btn">Show Answer</button>
         </section>
-        <section class="form-container flex">
+      </section>
+      <section class="form-container flex">
           <form class="question-form flex">
-            <label for="behavorial">
-              <input type="radio" name="question-type" value="behavorial">
-              Behavorial
-            </label>
-            <label for="html">
-              <input type="radio" name="question-type" value="html">
-              HTML
-            </label>
-            <label for="css">
-              <input type="radio" name="question-type" value="css">
-              CSS
-            </label>
-            <label for="javascript">
-              <input type="radio" name="question-type" value="javascript">
-              Javascript
-            </label>
-            <label for="github">
-              <input type="radio" name="question-type" value="github">
-              Github
-            </label>
-            <button id="generate-btn">Generate question</button>
-          </form>
+            <div class="column-container">
+              <div class="column">
+                <label for="javascriptQ">
+                  <input type="radio" name="question-type" value="javascriptQ">
+                  Javascript Questions
+                </label>
+                <label for="gitQ">
+                  <input type="radio" name="question-type" value="gitQ">
+                  Git Questions
+                </label>
+                <label for="pythonQ">
+                  <input type="radio" name="question-type" value="pythonQ">
+                  Python Questions
+                </label>
+                <label for="cQ">
+                  <input type="radio" name="question-type" value="cQ">
+                  C Questions
+                </label>
+              </div>
+              <div class="column">
+                <label for="javascriptP">
+                  <input type="radio" name="question-type" value="javascriptP">
+                  Javascript Practice
+                </label>
+                <label for="pythonP">
+                  <input type="radio" name="question-type" value="pythonP">
+                  Python Practice
+                </label>
+                <label for="cP">
+                  <input type="radio" name="question-type" value="cP">
+                  C Practice
+                </label>
+              </div>
+            </div>
+            <div class="button-container">
+              <button id="generate-btn">Generate question</button>
+            </div>
+          </form>            
       </section>
       <script defer src="js/main.js"  type="module"></script>
   </body>
