@@ -4,6 +4,28 @@
 @import-normalize;
 
 
+/* This adds a reusable components block for multiple properties, place the in jsx tag */
+
+/* @layer components {
+  .card {
+    background-color: theme(colors.white);
+    border-radius: theme(borderRadius.lg);
+    padding: theme(spacing.6);
+    box-shadow: theme(boxShadow.xl);
+  }
+} */
+
+/* This adds base values for the project */
+
+/* @layer base {
+  h1 {
+    @apply text-2xl font-roboto font-bold;
+  }
+  h2, h3, h4 {
+    @apply text-xl font-mono font-medium;
+  }
+} */
+
 
 body {
   @apply h-screen bg-gradient-to-b from-[#19055a] via-black to-[#1f1a3b] font-roboto text-gray-200 m-0;
@@ -12,7 +34,7 @@ body {
   @apply flex
 }
 .card-shape, .button {
-  @apply border-[5px] border-[#828cff] border-double 
+  @apply border-[5px] border-[#828cff] border-double
 }
 .header-title, .button {
   @apply shadow-buttonshadow shadow-[#182a7b]
