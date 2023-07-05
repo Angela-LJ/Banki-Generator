@@ -1,54 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Random question generator">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-
-
-    <title>Anki Card Generator</title>
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Question Generator</title>
+  </head>
   <body>
-      <header class="flex">
-        <h1 class="header-title">
-          Random Anki Generator
-        </h1>
-      </header>
-      <section class="card-section flex">
-        <section class="card-shape flex">
-          <p id="question"></p>
-          <button id="answer-btn">Show Answer</button>
-        </section>
-        <section class="form-container flex">
-          <form class="question-form flex">
-            <label for="behavorial">
-              <input type="radio" name="question-type" value="behavorial">
-              Behavorial
-            </label>
-            <label for="html">
-              <input type="radio" name="question-type" value="html">
-              HTML
-            </label>
-            <label for="css">
-              <input type="radio" name="question-type" value="css">
-              CSS
-            </label>
-            <label for="javascript">
-              <input type="radio" name="question-type" value="javascript">
-              Javascript
-            </label>
-            <label for="github">
-              <input type="radio" name="question-type" value="github">
-              Github
-            </label>
-            <button id="generate-btn">Generate question</button>
-          </form>
-      </section>
-      <script defer src="js/main.js"  type="module"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
