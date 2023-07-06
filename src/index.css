@@ -90,12 +90,14 @@ body {
   w-auto mx-auto  max-h-[49px]
 }
 .toggle-btn {
-  @apply w-44 py-[.5rem] px-[.7rem] 
+  @apply w-44 py-[.8rem] px-[.7rem] flex justify-center self-center active:bg-orange-500 active:text-[#828cff]
 }
 .button {
-  @apply bg-black rounded-xl font-mono hover:shadow-buttonhover hover:translate-y-1 active:bg-orange-500 active:text-[#828cff]
+  @apply bg-black rounded-xl font-mono hover:shadow-buttonhover hover:translate-y-1 
 }
-
+.generate-button {
+  @apply mr-5 px-4 py-[.8rem] flex self-center active:bg-orange-500 active:text-[#828cff]
+}
 /*********
 /* SIDE BTNS
 *********/
@@ -103,7 +105,9 @@ body {
 .options-btn {
   @apply w-11/12 py-[.5rem] max-w-[220px] max-h-[49px]
 }
-
+.selected-btn {
+  @apply bg-orange-500 text-[#828cff]
+}
 
 /*********
 /* COLUMNS
@@ -112,3 +116,4 @@ body {
 .question-column-1, .question-column-2 {
   @apply w-60 grid auto-cols-auto gap-4
 }
+

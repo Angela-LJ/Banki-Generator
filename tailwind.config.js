@@ -21,7 +21,7 @@ export default {
       },
       backgroundSize: {
         'main': '100% 0.15rem'
-      }
+      },
     },
     plugins: [],
   }
