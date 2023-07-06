@@ -51,19 +51,28 @@ function QuestionCardShape({ handleGenerateQuestion, currentQuestion, showAnswer
   return (
     <section className="card-shape">
       <div className="card-text">
-      {currentQuestion && currentQuestion.question ? (
-          showAnswer ? (currentQuestion.answer) : (currentQuestion.question)
-        ) : ('Select a new category and press generate')}
+        {currentQuestion && currentQuestion.question ? (
+          showAnswer ? (
+            Array.isArray(currentQuestion.answer) ? (
+              <ul className="list-disc">
+                {currentQuestion.answer.map((item, index) => (
+                  <li key={index}><pre className="whitespace-pre-wrap break-words my-1">{item}</pre></li>
+                ))}
+              </ul>
+            ) : ( currentQuestion.answer )
+          ) : ( currentQuestion.question )
+        ) : ( 'Select a new category and press generate' )}
       </div>
       <div className="card-btn">
-        <button className="generate-button button"
-        onClick={handleGenerateQuestion}
-        >Generate Question
+        <button className="generate-button button" onClick={handleGenerateQuestion}>
+          Generate Question
         </button>
-        <button className="toggle-btn button" id="answer-btn" onClick={toggleAnswer}>Show Answer</button>
+        <button className="toggle-btn button" id="answer-btn" onClick={toggleAnswer}>
+          Show Answer
+        </button>
       </div>
     </section>
-  )
+  );
 }
 
 function OptionsColumnOne({ selectedTypeValue, handleTypeSelection }) {
