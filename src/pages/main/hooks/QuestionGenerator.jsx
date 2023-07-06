@@ -2,7 +2,7 @@ import questionsAnswers from '../../../assets/data/questions';
 import { useState } from 'react';
 
 export function useQuestionGenerator() {
-  const [askedQuestions, setAskedQuestions] = useState([]);
+  const [askedQuestions, setAskedQuestions] = useState({selectedTypeValue: null, questions: []});
   const [currentQuestion, setCurrentQuestion] = useState('Select a category and press generate');
 
   const generateQuestionType = (selectedTypeValue) => {
