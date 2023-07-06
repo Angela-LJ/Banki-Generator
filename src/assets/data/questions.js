@@ -1092,11 +1092,11 @@ const questionsAnswers = {
       "question": "What are the basic data types in C, and what are there purposes?",
       "answer": [
       "C provides several basic data types, including:",
-      "1. int: used for integers, such as 10 or -5.",
-      "2. float: used for single-precision floating-point numbers, such as 3.14 or -0.5.",
-      "3. double: used for double-precision floating-point numbers, providing higher precision than float.",
-      "4. char: used for individual characters, such as 'a' or '7'.",
-      "5. void: used to indicate an empty or unknown type.",
+      "int: used for integers, such as 10 or -5.",
+      "float: used for single-precision floating-point numbers, such as 3.14 or -0.5.",
+      "double: used for double-precision floating-point numbers, providing higher precision than float.",
+      "char: used for individual characters, such as 'a' or '7'.",
+      "void: used to indicate an empty or unknown type.",
       "These are some of the common data types in C, and there are additional data types as well."
       ]
     },
@@ -1190,10 +1190,10 @@ const questionsAnswers = {
       "question": "What is the purpose of the realloc function in C?",
       "answer": [
       "In C, the realloc function is used to change the size of a previously allocated memory block. It takes two arguments: a pointer to the previously allocated memory block and the new size in bytes. The realloc function performs the following actions:",
-      "1. If the pointer is NULL, realloc behaves like malloc and allocates a new memory block of the specified size.",
-      "2. If the new size is smaller than the original size, realloc truncates the memory block to the new size, discarding the excess bytes.",
-      "3. If the new size is larger than the original size, realloc attempts to extend the memory block. If there is sufficient adjacent free memory, it may be able to accomplish this without moving the data. Otherwise, realloc allocates a new memory block, copies the contents of the old block to the new block, and frees the old block.",
-      "4. If realloc fails to allocate the requested memory, it returns NULL, and the original memory block remains unchanged.",
+      "If the pointer is NULL, realloc behaves like malloc and allocates a new memory block of the specified size.",
+      "If the new size is smaller than the original size, realloc truncates the memory block to the new size, discarding the excess bytes.",
+      "If the new size is larger than the original size, realloc attempts to extend the memory block. If there is sufficient adjacent free memory, it may be able to accomplish this without moving the data. Otherwise, realloc allocates a new memory block, copies the contents of the old block to the new block, and frees the old block.",
+      "If realloc fails to allocate the requested memory, it returns NULL, and the original memory block remains unchanged.",
       "The realloc function is useful when the size of a dynamically allocated memory block needs to be adjusted during program execution."
       ]
     },
@@ -1201,8 +1201,8 @@ const questionsAnswers = {
       "question": "What is the difference between stack and heap memory in C?",
       "answer": [
       "In C, stack and heap are two distinct regions of memory used for different purposes:",
-      "1. Stack memory is used for storing local variables, function call information, and other data related to function execution. It is organized in a Last-In-First-Out (LIFO) structure, meaning the most recently allocated memory is the first to be deallocated. The size of the stack is typically fixed and limited, determined by the operating system or compiler settings.",
-      "2. Heap memory, on the other hand, is used for dynamic memory allocation. It allows for the allocation and deallocation of memory blocks during runtime using functions like malloc, calloc, and realloc. The size of the heap is typically much larger than the stack and can grow or shrink as needed during program execution.",
+      "Stack memory is used for storing local variables, function call information, and other data related to function execution. It is organized in a Last-In-First-Out (LIFO) structure, meaning the most recently allocated memory is the first to be deallocated. The size of the stack is typically fixed and limited, determined by the operating system or compiler settings.",
+      "Heap memory, on the other hand, is used for dynamic memory allocation. It allows for the allocation and deallocation of memory blocks during runtime using functions like malloc, calloc, and realloc. The size of the heap is typically much larger than the stack and can grow or shrink as needed during program execution.",
       "In summary, stack memory is used for local variables and has a fixed size, while heap memory is used for dynamic memory allocation and has a larger size that can change during program execution."
       ]
     },
@@ -1220,9 +1220,9 @@ const questionsAnswers = {
       "answer": [
       "In C, the sizeof operator is used to determine the size in bytes of a type or a variable. It is a compile-time unary operator that returns the size as a constant of type size_t.",
       "The sizeof operator can be used with various operands:",
-      "- sizeof(type): Returns the size of the specified type.",
-      "- sizeof(expression): Returns the size of the evaluated expression.",
-      "- sizeof(variable): Returns the size of the variable's type.",
+      "sizeof(type): Returns the size of the specified type.",
+      "sizeof(expression): Returns the size of the evaluated expression.",
+      "sizeof(variable): Returns the size of the variable's type.",
       "The size calculated by sizeof depends on the implementation and the target architecture. It allows programs to work with types and variables in a more flexible and portable manner, ensuring that the correct amount of memory is allocated or accessed."
       ]
     }
