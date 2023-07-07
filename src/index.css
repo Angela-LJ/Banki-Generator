@@ -98,6 +98,10 @@ body {
 .generate-button {
   @apply mr-5 px-4 py-[.8rem] flex self-center active:bg-orange-500 active:text-[#828cff]
 }
+.answer-list {
+  @apply overflow-y-auto
+}
+
 /*********
 /* SIDE BTNS
 *********/

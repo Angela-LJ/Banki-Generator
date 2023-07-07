@@ -50,7 +50,7 @@ function QuestionCardShape({ handleGenerateQuestion, currentQuestion, showAnswer
 
   return (
     <section className="card-shape">
-      <div className="card-text">
+      <div className="card-text answer-list">
         {currentQuestion && currentQuestion.question ? (
           showAnswer ? (
             Array.isArray(currentQuestion.answer) ? (
