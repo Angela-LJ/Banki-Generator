@@ -83,7 +83,7 @@ body {
   p-6
 }
 .card-text {
-  @apply text-left w-11/12 h-auto
+  @apply text-left text-xl w-11/12 h-auto
 }
 .card-btn {
   @apply justify-center
