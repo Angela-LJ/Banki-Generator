@@ -1,0 +1,39 @@
+/*********
+/* CARD SECTN
+*********/
+
+.card-shape {
+  @apply bg-[#121c6a]
+  h-full w-full rounded-3xl
+  shadow-questionshadow
+  flex flex-col justify-between
+  p-6
+}
+
+.card-text {
+  @apply text-left w-11/12 h-auto
+}
+
+.answer-list {
+  @apply overflow-y-auto max-h-[26rem]
+}
+
+.card-btn {
+  @apply justify-center
+  w-auto mx-auto  max-h-[49px]
+}
+
+.card-shape {
+  @apply border-[5px] border-[#828cff] border-double;
+}
+
+/*********
+/* COLUMNS
+*********/
+
+.question-column-1, .question-column-2 {
+  @apply w-60 flex flex-col
+}
+.button-container {
+  @apply mb-4;
+}

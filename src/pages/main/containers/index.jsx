@@ -1,0 +1,5 @@
+export { default as Header } from './header/Header'
+export { default as MainSection } from './main/mainsection/MainSection'
+export { default as QuestionCardShape } from './main/cardsection/CardSection'
+export { OptionsColumnOne } from './main/cardsection/QuestionColumn'
+export { OptionsColumnTwo } from './main/cardsection/QuestionColumn'

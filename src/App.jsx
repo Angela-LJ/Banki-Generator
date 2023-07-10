@@ -1,11 +1,10 @@
-import Header from './pages/main/components/Header.jsx';
-import Main from './pages/main/components/MainSection.jsx'
+import { Header, MainSection } from './pages/main/containers'
 
 function App() {
   return (
     <>
       <Header />
-      <Main />
+      <MainSection />
     </>
   )
 }

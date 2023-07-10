@@ -1,10 +1,11 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap'); */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 @import-normalize;
 
 
-/* This adds a reusable components block for multiple properties, place the in jsx tag */
+/* This adds a reusable components block for multiple properties, place the class in element tag <div className="card" etc */
 
 /* @layer components {
   .card {
@@ -27,93 +28,4 @@
 } */
 
 
-body {
-  @apply h-screen bg-gradient-to-b from-[#19055a] via-black to-[#1f1a3b] font-roboto text-gray-200 m-0;
-}
-.header, .hero, .main-section, .card-shape, .card-btn, .question-column-1, .question-column-2 {
-  @apply flex
-}
-.card-shape, .button {
-  @apply border-[5px] border-[#828cff] border-double
-}
-.header-title, .button {
-  @apply shadow-buttonshadow shadow-[#182a7b]
-}
-/****************** 
-/* HEADER 
-******************/
-
-.header-title {
-  @apply font-semibold text-3xl/6
-  border-[5px] border-[#828cff] rounded-md 
-  my-4 
-  p-3 
-  capitalize;
-}
-.header {
-  @apply items-center 
-  flex-wrap 
-  justify-center;
-}
-
-/****************** 
-/* MAIN
-******************/
-
-.hero {
-  @apply justify-center
-}
-.main-section {
-  @apply flex-row flex-wrap justify-around items-center
-  w-[97vw] h-[80vh]
-  shadow-cardshadow rounded-3xl
-  bg-gradient-to-b from-[rgba(0,255,0,.05)] to-[rgba(255,255,255,.15)]
-  bg-main
-}
-
-/*********
-/* CARD SECTN
-*********/
-
-.card-shape {
-  @apply bg-[#121c6a]
-  h-[90%] w-3/5 rounded-3xl
-  shadow-questionshadow
-  flex-col justify-between
-  p-6
-}
-.card-text {
-  @apply text-left text-xl w-11/12 h-auto
-}
-.card-btn {
-  @apply justify-center
-  w-auto mx-auto  max-h-[49px]
-}
-.toggle-btn {
-  @apply w-44 py-[.8rem] px-[.7rem] flex justify-center self-center active:bg-orange-500 active:text-[#828cff]
-}
-.button {
-  @apply bg-black rounded-xl font-mono hover:shadow-buttonhover hover:translate-y-1 
-}
-.generate-button {
-  @apply mr-5 px-4 py-[.8rem] flex self-center active:bg-orange-500 active:text-[#828cff]
-}
-/*********
-/* SIDE BTNS
-*********/
-
-.options-btn {
-  @apply w-11/12 py-[.5rem] max-w-[220px] max-h-[49px]
-}
-.selected-btn {
-  @apply bg-orange-500 text-[#828cff]
-}
-
-/*********
-/* COLUMNS
-*********/
-
-.question-column-1, .question-column-2 {
-  @apply w-60 grid auto-cols-auto gap-4
-}
 

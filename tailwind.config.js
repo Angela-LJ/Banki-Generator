@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
   content: [
     "./index.html",
@@ -22,6 +23,9 @@ export default {
       backgroundSize: {
         'main': '100% 0.15rem'
       },
+      gridTemplateColumns: {
+        'cardgrid': 'repeat(5, 1fr);'
+      }
     },
     plugins: [],
   }
