@@ -19,7 +19,7 @@ body {
   justify-center
 }
 .main-section {
-  @apply grid-cols-cardgrid gap-9
+  @apply grid-cols-cardgrid
   w-[97vw] h-[80vh]
   shadow-cardshadow rounded-3xl
   bg-gradient-to-b from-[rgba(0,255,0,.05)] to-[rgba(255,255,255,.15)]
@@ -30,7 +30,7 @@ body {
   @apply justify-self-end text-right
 }
 .card-grid {
-  @apply col-span-3
+  @apply col-start-2 col-span-full xl:col-span-3
 }
 
 
