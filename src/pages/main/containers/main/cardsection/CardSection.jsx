@@ -11,7 +11,7 @@ export default function QuestionCardShape({ handleGenerateQuestion, currentQuest
           {currentQuestion && currentQuestion.question ? (
             showAnswer ? (
               Array.isArray(currentQuestion.answer) ? (
-                <ul className="list-disc">
+                <ul className="">
                   {currentQuestion.answer.map((item, index) => (
                     <li key={index}><pre className="whitespace-pre-wrap break-words my-1">{item}</pre></li>
                   ))}

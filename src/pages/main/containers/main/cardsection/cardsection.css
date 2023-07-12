@@ -11,7 +11,7 @@
 }
 
 .card-text {
-  @apply text-left w-11/12 h-auto
+  @apply text-left w-11/12 h-auto text-base lg:text-lg/6 pt-2 pl-4
 }
 
 .answer-list {
@@ -31,9 +31,14 @@
 /* COLUMNS
 *********/
 
-.question-column-1, .question-column-2 {
+.question-column-1 {
   @apply w-60 flex flex-col
 }
+
+.question-column-2 {
+  @apply hidden xl:flex xl:flex-col xl:w-60
+}
+
 .button-container {
   @apply mb-4;
 }
