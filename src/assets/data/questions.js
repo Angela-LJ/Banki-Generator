@@ -189,7 +189,7 @@ const questionsAnswers = {
       ]
     }
   ],
-  javascriptQ: [
+  javascript: [
     {
       "question": "How do you access the properties of an object in JavaScript?",
       "answer": [
@@ -371,7 +371,7 @@ const questionsAnswers = {
       ]
     }
   ],
-  gitQ: [
+  git: [
     {
       "question": "How do you initialize a new Git repository?",
       "answer": ["git init"]
@@ -589,7 +589,7 @@ const questionsAnswers = {
       ]
     }
   ],
-  pythonQ: [
+  python: [
     {
       "question": "What is a decorator in Python?",
       "answer": [
@@ -933,7 +933,7 @@ const questionsAnswers = {
       ]
     }
   ],
-  cQ: [
+  c: [
     {
       "question": "What is the syntax for declaring a variable in C?",
       "answer": [

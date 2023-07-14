@@ -39,6 +39,6 @@
   @apply hidden xl:flex xl:flex-col xl:w-60
 }
 
-.button-container {
+/* .button-container {
   @apply mb-4;
-}
+} */

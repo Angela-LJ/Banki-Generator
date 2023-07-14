@@ -25,9 +25,12 @@ export default {
       },
       gridTemplateColumns: {
         'cardgrid': 'repeat(5, 1fr);'
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       }
     },
-    plugins: [],
+    plugins: []
   }
 }
 

@@ -5,13 +5,14 @@
 .header-title {
   @apply font-semibold text-3xl/6
   border-[5px] border-[#828cff] rounded-md 
-  my-8
+  mt-5
+  mb-3
   p-3 
   capitalize
   shadow-buttonshadow shadow-[#182a7b];
 }
 .header {
   @apply items-center 
-  flex-wrap 
+  flex-wrap flex
   justify-center;
 }

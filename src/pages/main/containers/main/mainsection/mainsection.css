@@ -1,7 +1,7 @@
 body {
   @apply h-screen bg-gradient-to-b from-[#19055a] via-black to-[#1f1a3b] font-roboto text-gray-200 m-0;
 }
-.header, .hero {
+.hero {
   @apply flex
 }
 
@@ -22,15 +22,16 @@ body {
   @apply grid-cols-cardgrid
   w-[97vw] h-[80vh]
   shadow-cardshadow rounded-3xl
-  bg-gradient-to-b from-[rgba(0,255,0,.05)] to-[rgba(255,255,255,.15)]
-  bg-main
-  p-8
+  bg-gradient-to-b from-[#1f1a3b] from-30% to-[#19055a] to-80%
+  px-8
+  py-4
 }
+
+.card-grid {
+  @apply col-start-2 col-end-5
+}
+
+
 .question-column-2 {
   @apply justify-self-end text-right
 }
-.card-grid {
-  @apply col-start-2 col-span-full xl:col-span-3
-}
-
-
