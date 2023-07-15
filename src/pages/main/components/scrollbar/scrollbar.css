@@ -2,7 +2,7 @@
   @apply  w-72 rounded-full py-1
   bg-gradient-to-b from-[#7855ea] from-10% via-[#330eac] via-25% to-[#471cd4] to-80%
   shadow-cardshadow 
-  relative grid grid-flow-col gap-3 my-2
+  relative grid grid-flow-col gap-3 mt-4 mb-2
 }
 
 .scroll-chevron {
@@ -17,7 +17,7 @@
 
 .scroll-items {
   @apply overflow-x-scroll scroll-smooth  bg-transparent
-  transition-transform duration-700 ease-in-out;
+  transition-transform duration-300 ease-in-out;
 }
 
 .btn-container {
@@ -26,11 +26,11 @@
 
 
 .scroll-items.left {
-  @apply -translate-x-3
+  @apply -translate-x-4
 }
 
 .scroll-items.right {
-  @apply translate-x-3
+  @apply translate-x-4
 }
 
 

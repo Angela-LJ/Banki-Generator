@@ -1,20 +1,14 @@
 import React, { useState } from 'react'
 import { useQuestionGenerator } from '../../../hooks/QuestionGenerator.jsx'
 import './mainsection.css'
-import { ScrollBar } from '../../../components/index.js';
 import { QuestionCardShape } from '../../index';
 
 // import { sizes, useMediaQuery } from '../../../hooks/MediaQueries.jsx'
 
-export default function Main() {
+export default function Main({ selectedTypeValue }) {
 
-  const [showAnswer, setShowAnswer] = useState(false);
-  const [selectedTypeValue, setSelectedTypeValue] = useState('javascript');
+  const [ showAnswer, setShowAnswer ] = useState(false);
   const { currentQuestion, generateQuestionType } = useQuestionGenerator(); 
-
-  const handleTypeSelection = (typeValue) => {
-    setSelectedTypeValue(typeValue);
-  }
   
   const handleGenerateQuestion = () => {
     generateQuestionType(selectedTypeValue);
@@ -35,11 +29,6 @@ export default function Main() {
           </section>
         </div>
       </section>
-      <div className='flex justify-center w-full'>
-        <ScrollBar 
-          handleTypeSelection={handleTypeSelection}
-          />
-      </div>
     </>
   )
 }

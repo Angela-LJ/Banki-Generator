@@ -1,33 +1,50 @@
 import React, { useState } from "react";
 import "./scrollbar.css";
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
-// import { Button } from '../index';
+
 
 export default function ScrollBar({ handleTypeSelection }) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [slideDirection, setSlideDirection] = useState(""); // New state for slide direction
+  const [slideDirection, setSlideDirection] = useState("");
+  const [clickEnabled, setClickEnabled] = useState(true);
+
+  function slide(direction) {
+    setSlideDirection(direction)
+    
+    setTimeout(() => {
+      let newIndex; 
+
+      if (direction === 'left'){
+        newIndex = (currentIndex - 1 + scrollItems.length) % scrollItems.length
+      } else if (direction === 'right'){
+        newIndex = (currentIndex + 1) % scrollItems.length
+      }
+
+      setCurrentIndex(newIndex)
+      setSlideDirection("")
+
+      const currentItem = scrollItems[newIndex]
+      handleTypeSelection(currentItem.toLowerCase())
+    }, 300)
+  }
 
   const slideLeft = () => {
-    setSlideDirection("left"); // Set slide direction to "left"
+    if (!clickEnabled) return;
+    slide('left');
+    setClickEnabled(false)
     setTimeout(() => {
-      const newIndex = (currentIndex - 1 + scrollItems.length) % scrollItems.length;
-      setCurrentIndex(newIndex);
-      setSlideDirection(""); // Reset slide direction
-      const currentItem = scrollItems[newIndex];
-      handleTypeSelection(currentItem.toLowerCase()); // Pass the value to handleTypeSelection
-    }, 200); // Adjust the delay time (in milliseconds) as needed
-  };
-  
+      setClickEnabled(true)
+    }, 700)
+  }
+
   const slideRight = () => {
-    setSlideDirection("right"); // Set slide direction to "right"
+    if (!clickEnabled) return;
+    slide('right');
+    setClickEnabled(false)
     setTimeout(() => {
-      const newIndex = (currentIndex + 1) % scrollItems.length;
-      setCurrentIndex(newIndex);
-      setSlideDirection(""); // Reset slide direction
-      const currentItem = scrollItems[newIndex];
-      handleTypeSelection(currentItem.toLowerCase()); // Pass the value to handleTypeSelection
-    }, 200); // Adjust the delay time (in milliseconds) as needed
-  };
+      setClickEnabled(true)
+    }, 700)
+  }
 
   const scrollItems = ["Javascript", "Git", "Tailwind", "Python", "C", "This", "That", "Someother"];
 

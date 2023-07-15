@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.bottom-grid-children {
+  @apply inline-block justify-self-center
+}
+
+.bottom-grid {
+  @apply grid grid-cols-cardgrid
+}
+
+.grid-scrollbar {
+  @apply col-start-3
+}
+
+.grid-arcade-right {
+  @apply col-start-5
+}

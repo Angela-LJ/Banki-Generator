@@ -5,8 +5,7 @@
 .header-title {
   @apply font-semibold text-3xl/6
   border-[5px] border-[#828cff] rounded-md 
-  mt-5
-  mb-3
+  my-5
   p-3 
   capitalize
   shadow-buttonshadow shadow-[#182a7b];
