@@ -5,6 +5,7 @@ import { useState } from 'react';
 
 function App() {
   const [selectedTypeValue, setSelectedTypeValue] = useState('javascript');
+
   const handleTypeSelection = (typeValue) => {
     setSelectedTypeValue(typeValue);
   }
