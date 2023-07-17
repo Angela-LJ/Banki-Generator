@@ -46,7 +46,7 @@ export default function ScrollBar({ handleTypeSelection }) {
     }, 700)
   }
 
-  const scrollItems = ["Javascript", "Git", "Tailwind", "Python", "C", "This", "That", "Someother"];
+  const scrollItems = ["Javascript", "Git", "Python", "C", "Tailwind"];
 
   const visibleItems = [scrollItems[currentIndex]];
   

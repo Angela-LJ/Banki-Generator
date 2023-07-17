@@ -1,5 +1,5 @@
 const questionsAnswers = {
-  javascriptP: [
+  javascript: [
     {
       "question": "Create a for loop that prints the numbers from 1 to 10.",
       "answer": [
@@ -7,7 +7,7 @@ const questionsAnswers = {
       ]
     },
     {
-      "question": 'Declare a constiable called "message" and assign it the value "Hello, World!".',
+      "question": 'Declare a variable called "message" and assign it the value "Hello, World!".\nExtra: split the string in to an array with two strings "Hello" and "World!"',
       "answer": [
         'let message = "Hello, World!";'
       ]
@@ -21,9 +21,10 @@ const questionsAnswers = {
       ]
     },
     {
-      "question": 'Use the addition operator to concatenate the strings "Hello" and "World".',
+      "question": 'Create a variable "string" and assign it the value "Hello". Use the addition operator to concatenate the strings value and "World", and then console.log your result.',
       "answer": [
-        `"Hello" + "World";`
+        "let string = Hello"
+        `console.log(string + ' World')`
       ]
     },
     {
@@ -39,7 +40,7 @@ const questionsAnswers = {
       ]
     },
     {
-      "question": "Create an array named 'fruits' and initialize it with the values 'apple', 'banana', and 'orange'.",
+      "question": "Create an array named 'fruits' and initialize it with the values 'apple', 'banana', and 'orange'.\nExtra: add 'strawberry' to the fruits array and console.log fruits",
       "answer": [ 
         "let fruits = ['apple', 'banana', 'orange'];"
       ]
@@ -51,7 +52,7 @@ const questionsAnswers = {
       ]
     },
     {
-      "question": "Create a conditional statement that checks if a constiable 'age' is greater than or equal to 18, and if so, prints 'You are an adult.'",
+      "question": "Create a conditional statement that checks if a variable 'age' is greater than or equal to 18, and if so, prints 'You are an adult.'",
       "answer": [
         "if (age >= 18) {\n console.log('You are an adult.');\n}"
       ]
@@ -167,6 +168,7 @@ const questionsAnswers = {
     {
       "question": "Find the maximum number from the 'numbers' array using the Math.max method.",
       "answer": [
+        "const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]",
         "let maxNumber = Math.max(...numbers);"
       ]
     },
@@ -177,9 +179,10 @@ const questionsAnswers = {
       ]
     },
     {
-      "question": "Create an array named 'filteredNames' that contains only the names starting with the letter 'A' from the 'names' array using the filter method.",
+      "question": "Create an array named 'names' that contains 'Hillary', 'Jason', 'Johnathan', 'Jacob', 'Leon'. Now create a new array, 'filteredNames' that only contains the names starting with the letter 'J' from the 'names' array using the filter method.",
       "answer": [
-        "let filteredNames = names.filter(name => name.charAt(0) === 'A');"
+        "const names = ['Hillary', 'Jason', 'Johnathan', 'Jacob', 'Leon']",
+        "let filteredNames = names.filter(name => name.charAt(0) === 'J');"
       ]
     },
     {
@@ -187,9 +190,7 @@ const questionsAnswers = {
       "answer": [
         "let nameLengths = names.map(name => name.length);"
       ]
-    }
-  ],
-  javascript: [
+    },
     {
       "question": "How do you access the properties of an object in JavaScript?",
       "answer": [
@@ -199,25 +200,26 @@ const questionsAnswers = {
     {
       "question": "What is the difference between == and === operators in JavaScript?",
       "answer": [
-        "The == operator compares the values of two operands, while the === operator compares the values and types of two operands."
+        "The == Abstract equality operator compares the values of two operands, while the === Strict equality operator compares the values and types of two operands.",
+        "Abstract equality will attempt to resolve the data types via type coercion before making a comparison. Strict equality will return false if the types are different"
       ]
     },
     {
-      "question": "How do you declare a constiable in JavaScript?",
+      "question": "How do you declare a variable in JavaScript?",
       "answer": [
-        "You can declare a constiable in JavaScript using the 'const', 'let', or 'const' keyword."
+        "You can declare a variable in JavaScript using the 'var', 'let', or 'const' keyword."
       ]
     },
     {
-      "question": "What is the difference between let, const, and const in JavaScript?",
+      "question": "What is the difference between let, const, and var in JavaScript?",
       "answer": [
-        "'const' has function scope, 'let' and 'const' have block scope. 'const' is used for constiables that won't be reassigned, while 'let' and 'const' can be reassigned."
+        "'var' has function scope, 'let' and 'const' have block scope. 'const' is used for variables that won't be reassigned, while 'let' and 'const' can be reassigned."
       ]
     },
     {
       "question": "What are the different data types in JavaScript?",
       "answer": [
-        "JavaScript has several data types, including number, string, boolean, object, null, and undefined."
+        "JavaScript has several data types, including number, string, boolean, object, null, symbol, and undefined."
       ]
     },
     {
@@ -271,7 +273,7 @@ const questionsAnswers = {
     {
       "question": "What is an array in JavaScript?",
       "answer": [
-        "An array is a data structure in JavaScript that allows you to store multiple values in a single constiable. It is represented by square brackets [] and the values are separated by commas."
+        "An array is a data structure in JavaScript that allows you to store multiple values in a single variable. It is represented by square brackets [] and the values are separated by commas."
       ]
     },
     {
@@ -369,6 +371,48 @@ const questionsAnswers = {
       "answer": [
         "The event loop is a mechanism in JavaScript that allows for asynchronous execution of code. It handles the execution of tasks in a non-blocking manner, allowing other code to run while waiting for asynchronous operations to complete."
       ]
+    },
+    {
+      "question": "What is type coercion?",
+      "answer": [
+        "Type coercion is the process of converting a value from one data type to another.",
+        "In JavaScript, type coercion happens implicitly when operators or functions are applied to values of different types.",
+        "Any type of primitive or object is valid for type coercion."
+      ]
+    },
+    {
+      "question": "What are the primitive data types in JavaScript?\nExtra: describe the data types format and purpose.",
+      "answer": [
+        "String: a sequence of characters used to represent text",
+        "Number: a numeric data type in the double-precision 64-bit floating point format (IEE 754)",
+        "BigInt: BigInt is a numeric data type that can represent integers in the arbitrary precision format, and represents numbers too large for the number primitive",
+        "Boolean: a logical data type that has only two values, true or false",
+        "Undefined: a primitive value automatically assigned to variables that have just been declared, or to formal arguments for which there are no actual arguments.",
+        "Symbol: a built in object whose constructor returns a symbol that is used to add unique property keys to an object that won't collide with keys any other code might add to the object, and which are hidden from any mechanisms other code will typically use to access the object. That enables a form of weak encapsulation, or a weak form of information hiding",
+        "Null: a value that represents a reference that points, generally intentionally, to a nonexistent or invalid object or address."
+      ]
+    },
+    {
+      "question": "What is arbitrary precision format?",
+      "answer": [
+        "Arbitrary precision format, also known as arbitrary precision arithmetic or bignum arithmetic, is a method of representing and performing calculations on numbers with an unlimited number of digits. Unlike fixed-width data types, which have a predetermined number of bits or digits, arbitrary precision format uses dynamic data structures to store individual digits, allowing for precise calculations with numbers of any size. It enables accurate computations in applications where precision and range are essential, albeit with increased computational overhead compared to fixed-width types.",
+        "Arbitrary precision format overcomes these limitations by using dynamic data structures, such as arrays or linked lists, to store digits of a number. Each digit is typically represented using an integer or a similar data type. This approach allows for numbers with an arbitrarily large number of digits."
+      ]
+    },
+    {
+      "question": "What is the hasOwnProperty(), or Object.hasOwn() method used for?",
+      "answer": "Both methods return a boolean indicating whether the object has the specified property as its own property, as opposed to inheriting it"
+    },
+    {
+      "question": "What are closures in JavaScript?",
+      "answer": [
+        "A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function's scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.",
+        "Encapsulation: Closures allow you to create private variables and methods by encapsulating data within a function, preventing external access and unintended modifications.",
+        "Preserving state: Closures enable functions to retain access to their surrounding variables and values, even after the enclosing function has finished executing, allowing them to maintain and reference that state.",
+        "Data privacy: Closures help enforce data privacy by exposing only necessary functions and variables to the outside world while keeping the rest hidden, enabling controlled access to internal components.",
+        "Function factories: Closures are utilized to create function factories that generate specialized functions based on arguments provided, allowing the generated functions to retain access to the closure's variables and configurations.",
+        "Callbacks and asynchronous operations: Closures play a crucial role in handling callbacks and asynchronous operations by storing references to required data within the closure, ensuring accessibility when the asynchronous operation completes, even if the original function has finished execution."
+      ]
     }
   ],
   git: [
@@ -449,7 +493,7 @@ const questionsAnswers = {
       "answer": ["git reset --hard HEAD"]
     }
   ],
-  pythonP: [
+  python: [
     {
       "question": "Write a function in Python to check if a number is prime.",
       "answer": [
@@ -587,9 +631,7 @@ const questionsAnswers = {
       "answer": [
       "def sort_list_of_dictionaries(lst, key):\n return sorted(lst, key=lambda x: x[key])"
       ]
-    }
-  ],
-  python: [
+    },
     {
       "question": "What is a decorator in Python?",
       "answer": [
@@ -765,7 +807,7 @@ const questionsAnswers = {
       ]
     }
   ],
-  cP: [
+  c: [
     {
       "question": "Write a function to calculate the factorial of a number.",
       "answer": [
@@ -931,9 +973,7 @@ const questionsAnswers = {
       " return gcd(b, a % b);",
       "}"
       ]
-    }
-  ],
-  c: [
+    },
     {
       "question": "What is the syntax for declaring a variable in C?",
       "answer": [
@@ -1226,7 +1266,7 @@ const questionsAnswers = {
       "The size calculated by sizeof depends on the implementation and the target architecture. It allows programs to work with types and variables in a more flexible and portable manner, ensuring that the correct amount of memory is allocated or accessed."
       ]
     }
-  ]
+  ],
 }
 
 export default questionsAnswers
