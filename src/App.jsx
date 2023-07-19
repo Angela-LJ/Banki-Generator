@@ -1,5 +1,6 @@
-import { Header, MainSection } from './pages/main/containers'
-import { ScrollBar, ArcadeButtonLightP, ArcadeButtonDarkP, ArcadeButtonLightB, ArcadeButtonDarkB } from './pages/main/components'
+
+import { Header, MainSection, BottomSection } from './pages/main/containers'
+
 import './App.css'
 import { useState } from 'react';
 
@@ -11,24 +12,15 @@ function App() {
 
   return (
     <>
-      <Header />
-      <MainSection
-      selectedTypeValue={selectedTypeValue}
-      />
-      <section className='bottom-grid'>
-        <div className="bottom-grid-children grid-arcade-left">
-          <ArcadeButtonLightP />
-          <ArcadeButtonDarkP />
-        </div>
-        <div className='bottom-grid-children grid-scrollbar'>
-          <ScrollBar
-            handleTypeSelection={handleTypeSelection}
-          />
-        </div>
-        <div className="bottom-grid-children grid-arcade-right">
-          <ArcadeButtonLightB />
-          <ArcadeButtonDarkB />
-        </div>
+      <section className="hero">
+        <Header />
+        <MainSection 
+        selectedTypeValue={selectedTypeValue}
+        />
+        <BottomSection
+        handleTypeSelection={handleTypeSelection}
+        />
+
       </section>
     </>
   )

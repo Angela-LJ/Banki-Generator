@@ -2,19 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.bottom-grid-children {
-  @apply inline-block justify-self-center
+body {
+  @apply h-screen p-4 bg-gradient-to-b from-[#19055a] via-black to-[#1f1a3b] font-roboto text-gray-200 m-0;
 }
 
-.bottom-grid {
-  @apply grid grid-cols-cardgrid
+/****************
+/* MAIN SECTION
+****************/
+
+.hero {
+  @apply flex justify-center w-[98vw] h-[97vh] flex-col
+  shadow-cardshadow rounded-3xl
+  bg-gradient-to-b from-[#1f1a3b] from-30% to-[#19055a] to-80%
 }
 
-.grid-scrollbar {
-  @apply col-start-3
-}
 
-.grid-arcade-right {
-  @apply col-start-5
-}
+
+/****************
+/* BOTTOM SECTION
+****************/
+

@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { useQuestionGenerator } from '../../../hooks/QuestionGenerator.jsx'
 import './mainsection.css'
+import { DisplaySection } from '../../../components/index.js'
 import { QuestionCardShape } from '../../index';
 
-// import { sizes, useMediaQuery } from '../../../hooks/MediaQueries.jsx'
 
 export default function Main({ selectedTypeValue }) {
 
@@ -17,18 +17,23 @@ export default function Main({ selectedTypeValue }) {
   
   return (
     <>
-      <section className="hero">
-        <div className='main-section grid'>
-          <section className="card-grid">
-            <QuestionCardShape 
-              handleGenerateQuestion={handleGenerateQuestion}
-              currentQuestion={currentQuestion.question}
-              showAnswer={showAnswer}
-              toggleAnswer={() => setShowAnswer(!showAnswer)}
+      <div className='main-section'>
+        <section className="card-grid">
+          <QuestionCardShape 
+            handleGenerateQuestion={handleGenerateQuestion}
+            currentQuestion={currentQuestion.question}
+            showAnswer={showAnswer}
+            toggleAnswer={() => setShowAnswer(!showAnswer)}
+          />
+        </section>
+        <section className="display-container justify-self-end">
+          <div className="display-type-section bg-black">
+            <DisplaySection
+              selectedTypeValue={selectedTypeValue}
             />
-          </section>
-        </div>
-      </section>
+          </div>
+        </section>
+      </div>         
     </>
   )
 }

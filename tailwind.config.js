@@ -42,7 +42,8 @@ export default {
         'main': '100% 0.15rem'
       },
       gridTemplateColumns: {
-        'cardgrid': 'repeat(5, 1fr);'
+        'cardgrid': 'repeat(5, 1fr);',
+        'buttongrid': 'repeat(7, 1fr);'
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

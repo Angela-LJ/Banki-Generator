@@ -1,4 +1,5 @@
 export { default as ButtonGroup } from './standardbutton/GenerateBtnGroup'
 export { default as Button } from './standardbutton/SelectTypeBtn'
 export { default as ScrollBar } from './scrollbar/ScrollBar'
+export { default as DisplaySection } from './displaysection/DisplaySection'
 export { ArcadeButtonLightP, ArcadeButtonDarkP, ArcadeButtonLightB, ArcadeButtonDarkB} from './arcadebutton/ArcadeBtn'
