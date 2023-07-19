@@ -1,11 +1,10 @@
 import { Header, MainSection } from './pages/main/containers'
-import { ScrollBar, ArcadeButton } from './pages/main/components'
+import { ScrollBar, ArcadeButtonLightP, ArcadeButtonDarkP, ArcadeButtonLightB, ArcadeButtonDarkB } from './pages/main/components'
 import './App.css'
 import { useState } from 'react';
 
 function App() {
   const [selectedTypeValue, setSelectedTypeValue] = useState('javascript');
-
   const handleTypeSelection = (typeValue) => {
     setSelectedTypeValue(typeValue);
   }
@@ -13,22 +12,22 @@ function App() {
   return (
     <>
       <Header />
-      <MainSection 
+      <MainSection
       selectedTypeValue={selectedTypeValue}
       />
       <section className='bottom-grid'>
         <div className="bottom-grid-children grid-arcade-left">
-          <ArcadeButton />
-          <ArcadeButton />
+          <ArcadeButtonLightP />
+          <ArcadeButtonDarkP />
         </div>
         <div className='bottom-grid-children grid-scrollbar'>
-          <ScrollBar 
+          <ScrollBar
             handleTypeSelection={handleTypeSelection}
           />
         </div>
         <div className="bottom-grid-children grid-arcade-right">
-          <ArcadeButton />
-          <ArcadeButton />
+          <ArcadeButtonLightB />
+          <ArcadeButtonDarkB />
         </div>
       </section>
     </>

@@ -23,8 +23,8 @@ const questionsAnswers = {
     {
       "question": 'Create a variable "string" and assign it the value "Hello". Use the addition operator to concatenate the strings value and "World", and then console.log your result.',
       "answer": [
-        "let string = Hello"
-        `console.log(string + ' World')`
+        "let string = Hello",
+        "console.log(string + ' World')"
       ]
     },
     {
@@ -41,7 +41,7 @@ const questionsAnswers = {
     },
     {
       "question": "Create an array named 'fruits' and initialize it with the values 'apple', 'banana', and 'orange'.\nExtra: add 'strawberry' to the fruits array and console.log fruits",
-      "answer": [ 
+      "answer": [
         "let fruits = ['apple', 'banana', 'orange'];"
       ]
     },
@@ -775,13 +775,13 @@ const questionsAnswers = {
       "answer": [
       "Monkey patching in Python refers to the practice of modifying or extending code at runtime, typically by adding, modifying, or replacing methods or attributes of existing classes or objects. It allows you to change the behavior of code without modifying its original source code. Monkey patching can be a powerful technique but should be used with caution as it can make code harder to understand and maintain."
       ]
-    },  
+    },
     {
       "question": "What is the Global Namespace and Local Namespace in Python?",
       "answer": [
       "In Python, the global namespace refers to the namespace that contains names defined at the top level of a module or script. It is accessible throughout the module or script. On the other hand, the local namespace refers to the namespace created when a function is called. It contains names defined within the function's scope and is destroyed when the function returns."
       ]
-    },  
+    },
     {
       "question": "What is the purpose of the 'name' variable in Python?",
       "answer": [
