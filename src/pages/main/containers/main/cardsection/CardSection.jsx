@@ -3,7 +3,7 @@ import { ButtonGroup } from '../../../components/index';
 import './cardsection.css'
 
 export default function QuestionCardShape({ handleGenerateQuestion, currentQuestion, showAnswer, toggleAnswer }) {
-
+  
   return (
     <>
       <div className="card-shape">

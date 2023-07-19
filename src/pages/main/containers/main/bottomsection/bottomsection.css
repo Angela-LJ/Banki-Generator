@@ -1,0 +1,15 @@
+.bottom-grid-children {
+  @apply inline-block justify-self-center
+}
+
+.bottom-grid {
+  @apply grid grid-cols-buttongrid
+}
+
+.grid-scrollbar {
+  @apply col-start-4
+}
+
+.svg-btn-container {
+  @apply flex flex-col w-auto items-center
+}
