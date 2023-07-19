@@ -23,8 +23,8 @@ const questionsAnswers = {
     {
       "question": 'Create a variable "string" and assign it the value "Hello". Use the addition operator to concatenate the strings value and "World", and then console.log your result.',
       "answer": [
-        "let string = Hello"
-        `console.log(string + ' World')`
+        "let string = Hello",
+        "console.log(string + ' World')"
       ]
     },
     {
