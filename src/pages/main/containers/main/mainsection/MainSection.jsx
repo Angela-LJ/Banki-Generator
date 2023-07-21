@@ -14,7 +14,6 @@ export default function Main({ selectedTypeValue }) {
     generateQuestionType(selectedTypeValue);
     setShowAnswer(false);
   }
-  
   return (
     <>
       <div className='main-section'>
@@ -26,7 +25,7 @@ export default function Main({ selectedTypeValue }) {
             toggleAnswer={() => setShowAnswer(!showAnswer)}
           />
         </section>
-        <section className="display-container justify-self-end">
+        <section className="display-container justify-self-center">
           <div className="display-type-section bg-black">
             <DisplaySection
               selectedTypeValue={selectedTypeValue}
