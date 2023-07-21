@@ -17,22 +17,22 @@ export default function DisplaySection({ selectedTypeValue }) {
       {imagePath && (
         <>
           <img
-            className={`h-24 w-24 ${selectedTypeValue === 'c' ? '' : 'hidden'}`}
+            className={`svg-container ${selectedTypeValue === 'c' ? '' : 'hidden'}`}
             src="c.svg"
             alt="C"
           />
           <img
-            className={`h-24 w-24 ${selectedTypeValue === 'git' ? '' : 'hidden'}`}
+            className={`svg-container ${selectedTypeValue === 'git' ? '' : 'hidden'}`}
             src="git.svg"
             alt="Git"
           />
           <img
-            className={`h-24 w-24 ${selectedTypeValue === 'javascript' ? '' : 'hidden'}`}
+            className={`svg-container ${selectedTypeValue === 'javascript' ? '' : 'hidden'}`}
             src="javascript.svg"
             alt="JavaScript"
           />
           <img
-            className={`h-24 w-24 ${selectedTypeValue === 'python' ? '' : 'hidden'}`}
+            className={`svg-container ${selectedTypeValue === 'python' ? '' : 'hidden'}`}
             src="python.svg"
             alt="Python"
           />

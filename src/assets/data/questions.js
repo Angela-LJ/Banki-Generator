@@ -413,7 +413,43 @@ const questionsAnswers = {
         "Function factories: Closures are utilized to create function factories that generate specialized functions based on arguments provided, allowing the generated functions to retain access to the closure's variables and configurations.",
         "Callbacks and asynchronous operations: Closures play a crucial role in handling callbacks and asynchronous operations by storing references to required data within the closure, ensuring accessibility when the asynchronous operation completes, even if the original function has finished execution."
       ]
-    }
+    },
+    {
+      "question": "What is prototypal inheritance?",
+      "answer": [
+        "Prototypal inheritance is a fundamental concept in JavaScript that allows objects to inherit properties and methods from other objects. It is a way to create new objects based on existing objects, known as prototypes."
+      ]
+    },
+    {
+      "question": "How does prototypal inheritance work?",
+      "answer": [
+        "Explanation: All JavaScript objects have a __proto__ property that is a reference to another object, which is called the object's \"prototype\". If a property is accessed on an object, but not found, the JavaScript engine check's that object prototype. If again it's not found, it checks that prototype's prototype on up the chain until it reaches the top of the chain.",
+        "Use: It can help reduce redundant code."
+      ],
+      "example": [
+        "/images/prototypal.jpg", 
+        "For more information, check out the documentation:",
+        "Source: https://www.frontendinterviewhandbook.com/javascript-questions"
+      ]
+    },
+    {
+      "question": "",
+      "answer": [
+
+      ]
+    },
+    {
+      "question": "",
+      "answer": [
+
+      ]
+    },
+    {
+      "question": "",
+      "answer": [
+
+      ]
+    },
   ],
   git: [
     {
