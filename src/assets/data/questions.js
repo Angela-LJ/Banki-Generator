@@ -7,7 +7,7 @@ const questionsAnswers = {
       ]
     },
     {
-      "question": 'Declare a variable called "message" and assign it the value "Hello, World!".\nExtra: split the string in to an array with two strings "Hello" and "World!"',
+      "question": 'Declare a variable called "message" and assign it the value "Hello, World!".\nExtra: Split the string in to an array with two strings, "Hello" and "World!"',
       "answer": [
         'let message = "Hello, World!";'
       ]
@@ -30,13 +30,17 @@ const questionsAnswers = {
     {
       "question": "Create a function named 'multiply' that takes two parameters 'num1' and 'num2' and returns their product.",
       "answer": [
-        "function multiply(num1, num2) {\n return num1 * num2;\n}"
+        "function multiply(num1, num2) {",
+        " return num1 * num2;",
+        "}"
       ]
     },
     {
       "question": "Write a JavaScript function named 'isEven' that takes a number as a parameter and returns true if the number is even, and false otherwise.",
       "answer": [
-        "function isEven(number) {\n return number % 2 === 0;\n}"
+        "function isEven(number) {",
+        " return number % 2 === 0;",
+      "}"
       ]
     },
     {
@@ -48,7 +52,9 @@ const questionsAnswers = {
     {
       "question": "Write a JavaScript function named 'getLength' that takes an array as a parameter and returns its length.",
       "answer": [
-        "function getLength(array) {\n return array.length;\n}"
+        "function getLength(array) {",
+        " return array.length;",
+        "}"
       ]
     },
     {
@@ -351,6 +357,7 @@ const questionsAnswers = {
     {
       "question": "What is the difference between 'call()', 'apply()', and 'bind()' methods in JavaScript?",
       "answer": [
+        "Both call() and apply() are used to invoke functions the difference is in how they take arguments. .call() takes them as comma-separated values and .apply() takes them as an array.",
         "'call()', 'apply()', and 'bind()' are methods used to set the value of 'this' in a function. 'call()' and 'apply()' invoke the function immediately, while 'bind()' returns a new function with the bound 'this' value."
       ]
     },
@@ -430,24 +437,6 @@ const questionsAnswers = {
         "/images/prototypal.jpg", 
         "For more information, check out the documentation:",
         "Source: https://www.frontendinterviewhandbook.com/javascript-questions"
-      ]
-    },
-    {
-      "question": "",
-      "answer": [
-
-      ]
-    },
-    {
-      "question": "",
-      "answer": [
-
-      ]
-    },
-    {
-      "question": "",
-      "answer": [
-
       ]
     },
   ],
