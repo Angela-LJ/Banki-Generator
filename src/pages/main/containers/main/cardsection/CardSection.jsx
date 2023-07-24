@@ -17,7 +17,11 @@ export default function QuestionCardShape({ handleGenerateQuestion, currentQuest
                   ))}
                 </ul>
               ) : ( currentQuestion.answer )
-            ) : ( currentQuestion.question )
+            ) : ( currentQuestion.question.split('\n').map((line, lineIndex) =>
+              <div key={lineIndex}>
+                <pre className="whitespace-pre-wrap break-words my-1">{line}</pre>
+              </div>                
+                ) )
           ) : ( 'Select a new category and press generate' )}
         </div>
         <ButtonGroup

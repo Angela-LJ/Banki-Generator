@@ -14,6 +14,7 @@ export default function Main({ selectedTypeValue }) {
     generateQuestionType(selectedTypeValue);
     setShowAnswer(false);
   }
+
   return (
     <>
       <div className='main-section'>
