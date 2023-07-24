@@ -45,7 +45,7 @@ const questionsAnswers = {
     },
     {
       "question": "Create an array named 'fruits' and initialize it with the values 'apple', 'banana', and 'orange'.\nExtra: add 'strawberry' to the fruits array and console.log fruits",
-      "answer": [ 
+      "answer": [
         "let fruits = ['apple', 'banana', 'orange'];"
       ]
     },
@@ -439,6 +439,39 @@ const questionsAnswers = {
         "Source: https://www.frontendinterviewhandbook.com/javascript-questions"
       ]
     },
+    {
+      "question": "Create a function 'Digital root,' which is the recursive sum of all the digits in a number. Given n, take the sum of the digits of n. If that value has more than one digit, continue reducing in this way until a single-digit number is produced. The input will be a non-negative integer.\n 16  -->  1 + 6 = 7\n942  -->  9 + 4 + 2 = 15  -->  1 + 5 = 6",
+      "answer": [
+        "function digitalRoot(n) {",
+        " if (n < 10)",
+        "   return n;",
+        " const digits = n.toString();",
+        " const sumDigits = digits.split('').reduce(",
+        "   (acc, digit) => acc + parseInt(digit, 10), 0);",
+        " return digitalRoot(sumDigits);"
+      ]
+    },
+    {
+      "question": "The examples below show you how to write function accum:\naccum('abcd') -> 'A-Bb-Ccc-Dddd'\naccum('RqaEzty') -> 'R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy'\naccum('cwAt') -> 'C-Ww-Aaa-Tttt'",
+      "answer": [
+        "function accum(s) {",
+        "  const result = [];",
+        "  const chars = s.split('');",
+        "  for (let i = 0; i < chars.length; i++) {",
+        "    let char = chars[i].toUpperCase();",
+        "    const repetition = i + 1;",
+        "    result.push(char + chars[i].toLowerCase().repeat(repetition - 1));",
+        "  }",
+        "  return result.join('-');",
+        "}"
+      ]
+    },
+    {
+      "question": "",
+      "answer": [
+
+      ]
+    },
   ],
   git: [
     {
@@ -800,13 +833,13 @@ const questionsAnswers = {
       "answer": [
       "Monkey patching in Python refers to the practice of modifying or extending code at runtime, typically by adding, modifying, or replacing methods or attributes of existing classes or objects. It allows you to change the behavior of code without modifying its original source code. Monkey patching can be a powerful technique but should be used with caution as it can make code harder to understand and maintain."
       ]
-    },  
+    },
     {
       "question": "What is the Global Namespace and Local Namespace in Python?",
       "answer": [
       "In Python, the global namespace refers to the namespace that contains names defined at the top level of a module or script. It is accessible throughout the module or script. On the other hand, the local namespace refers to the namespace created when a function is called. It contains names defined within the function's scope and is destroyed when the function returns."
       ]
-    },  
+    },
     {
       "question": "What is the purpose of the 'name' variable in Python?",
       "answer": [
@@ -829,6 +862,16 @@ const questionsAnswers = {
       "question": "What are some differences between sets and frozensets in Python?",
       "answer": [
       "Sets and frozensets are both unordered collections of unique elements in Python. The main difference is that sets are mutable, while frozensets are immutable. This means that you can add, remove, or modify elements in a set, but you cannot do so in a frozenset. Sets are useful for storing and manipulating data, while frozensets are useful when you need an immutable set that can be used as a dictionary key or an element in another set."
+      ]
+    },
+    {
+      "question": "The examples below show you how to write function accum:\naccum('abcd') -> 'A-Bb-Ccc-Dddd'\naccum('RqaEzty') -> 'R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy'\naccum('cwAt') -> 'C-Ww-Aaa-Tttt'",
+      "answer": [
+        "def accum(s):",
+        "  newString = \"\"",
+        "  for i, char in enumerate(s):",
+        "    newString += char.upper() + char.lower() * i + \"-\"",
+        "  return newString[:-1]"
       ]
     }
   ],
@@ -1289,6 +1332,95 @@ const questionsAnswers = {
       "sizeof(expression): Returns the size of the evaluated expression.",
       "sizeof(variable): Returns the size of the variable's type.",
       "The size calculated by sizeof depends on the implementation and the target architecture. It allows programs to work with types and variables in a more flexible and portable manner, ensuring that the correct amount of memory is allocated or accessed."
+      ]
+    },
+    {
+      "question": "Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.\nExample: createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) // => returns '(123) 456-7890'",
+      "answer": [
+        "function createPhoneNumber(phnum, nums) {",
+        " let numCount = 0;",
+        " for (let i = 0; i < 15; i++) {",
+        "   switch (i) {",
+        "     case 0:",
+        "       phnum[i] = '(';",
+        "       break;",
+        "     case 4:",
+        "       phnum[i] = ')';",
+        "       break;",
+        "     case 5:",
+        "       phnum[i] = ' ';",
+        "       break;",
+        "     case 9:",
+        "       phnum[i] = '-';",
+        "       break;",
+        "     case 14:",
+        "       phnum[i] = '\\0';",
+        "       break;",
+        "       break;",
+        "     default:",
+        "       phnum[i] = String.fromCharCode(nums[numCount] + 48);",
+        "       numCount++;",
+        "   }",
+        " }",
+        "}"
+      ]
+    },
+    {
+      "question": "The examples below show you how to write function accum:\naccum('abcd') -> 'A-Bb-Ccc-Dddd'\naccum('RqaEzty') -> 'R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy'\naccum('cwAt') -> 'C-Ww-Aaa-Tttt'",
+      "answer": [
+        "#include <stdio.h>",
+        "#include <ctype.h>",
+        "#include <string.h>",
+        "#include <stdlib.h>",
+        "char *accum(const char *source){",
+        "  int length = strlen(source);",
+        "  char* result = (char*)malloc(length * (length + 1) / 2 + length);",
+        "  int result_index = 0;",
+        "",
+        "  for (int i = 0; i < length; i++){",
+        "    char ch = source[i];",
+        "    result[result_index++] = toupper(ch);",
+        "    ",
+        "    for (int j = 0; j < i; j++){",
+        "      result[result_index++] = tolower(ch);",
+        "    }",
+        "    if (i != length - 1){",
+        "      result[result_index++] = '-';",
+        "    }",
+        "  }",
+        "  result[result_index] = '\\0';",
+        "  return result;",
+        "}"
+      ]
+    },
+    {
+      "question": "You are given a string of space separated numbers, and have to return the highest and lowest number.\nExample: highAndLow(\"1 2 3 4 5\");  // return \"5 1\"",
+      "answer": [
+        '#include <stdio.h>',
+        '#include <stdlib.h>',
+        '#include <limits.h>',
+        'void high_and_low (const char *strnum, char *result)',
+        '{',
+        '  int lowest = INT_MAX;',
+        '  int highest = INT_MIN;',
+        '  int current;',
+        '  ',
+        '  while(sscanf(strnum, "%d", &current)== 1){',
+        '    if (current > highest){',
+        '      highest = current;',
+        '    }',
+        '    if (current < lowest){',
+        '      lowest = current;',
+        '    }',
+        '    while (*strnum != " " && *strnum != "\0"){',
+        '      strnum++;',
+        '    }',
+        '    if (*strnum == " "){',
+        '      strnum++;',
+        '    }',
+        '  }',
+        '  sprintf(result, "%d %d", highest, lowest);',
+        '}'
       ]
     }
   ],

@@ -1,10 +1,11 @@
+
 import { Header, MainSection, BottomSection } from './pages/main/containers'
+
 import './App.css'
 import { useState } from 'react';
 
 function App() {
   const [selectedTypeValue, setSelectedTypeValue] = useState('javascript');
-
   const handleTypeSelection = (typeValue) => {
     setSelectedTypeValue(typeValue);
   }
@@ -19,6 +20,7 @@ function App() {
         <BottomSection
         handleTypeSelection={handleTypeSelection}
         />
+
       </section>
     </>
   )
