@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import "./scrollbar.css";
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
+import { useCardTextContext } from "../../hooks/CardTextContext";
 
 
-export default function ScrollBar({ handleTypeSelection }) {
+export default function ScrollBar({ }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slideDirection, setSlideDirection] = useState("");
   const [clickEnabled, setClickEnabled] = useState(true);
+
+  const {    
+    selectedTypeValue,      
+    setSelectedTypeValue,     
+    handleTypeSelection, } = useCardTextContext();
 
   function slide(direction) {
     setSlideDirection(direction)

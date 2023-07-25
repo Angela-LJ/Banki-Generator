@@ -1,35 +1,43 @@
 import React from 'react';
 import { ButtonGroup } from '../../../components/index';
 import './cardsection.css'
+import { useCardTextContext } from "../../../hooks/CardTextContext";
 
-export default function QuestionCardShape({ handleGenerateQuestion, currentQuestion, showAnswer, toggleAnswer }) {
+export default function QuestionCardShape({ }) {
+  const cardTextContext = useCardTextContext();
   
+  const { question, answer, example } = cardTextContext.currentQuestion || {};
+
   return (
     <>
       <div className="card-shape">
         <div className="card-text answer-list">
-          {currentQuestion && currentQuestion.question ? (
-            showAnswer ? (
-              Array.isArray(currentQuestion.answer) ? (
+          {question ? (
+            cardTextContext.showAnswer ? (
+              answer ? (
                 <ul className="">
-                  {currentQuestion.answer.map((item, index) => (
-                    <li key={index}><pre className="whitespace-pre-wrap break-words my-1">{item}</pre></li>
+                  {answer.map((item, index) => (
+                    <li key={index}>
+                      <pre className="whitespace-pre-wrap break-words my-1">{item}</pre>
+                    </li>
                   ))}
                 </ul>
-              ) : ( currentQuestion.answer )
-            ) : ( currentQuestion.question.split('\n').map((line, lineIndex) =>
-              <div key={lineIndex}>
-                <pre className="whitespace-pre-wrap break-words my-1">{line}</pre>
-              </div>                
-                ) )
-          ) : ( 'Select a new category and press generate' )}
+              ) : (
+                <pre className="whitespace-pre-wrap break-words my-1">{answer}</pre>
+              )
+            ) : (
+              question.split('\n').map((line, lineIndex) => (
+                <div key={lineIndex}>
+                  <pre className="whitespace-pre-wrap break-words my-1">{line}</pre>
+                </div>
+              ))
+            )
+          ) : (
+            'Select a new category and press generate'
+          )}
         </div>
-        <ButtonGroup
-          handleGenerateQuestion={handleGenerateQuestion}
-          toggleAnswer={toggleAnswer}
-        />
+        <ButtonGroup />
       </div>
     </>
-  );
+  )
 }
-

@@ -1,8 +1,10 @@
 import './displaysection.css'
 import React, { useState, useEffect } from 'react';
+import { useCardTextContext } from "../../hooks/CardTextContext";
 
 
-export default function DisplaySection({ selectedTypeValue }) {
+export default function DisplaySection({ }) {
+  const { selectedTypeValue } = useCardTextContext();
   const [imagePath, setImagePath] = useState(selectedTypeValue);
 
   useEffect(() => {
