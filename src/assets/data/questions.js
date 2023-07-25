@@ -466,12 +466,6 @@ const questionsAnswers = {
         "}"
       ]
     },
-    {
-      "question": "",
-      "answer": [
-
-      ]
-    },
   ],
   git: [
     {
