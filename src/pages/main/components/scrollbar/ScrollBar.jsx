@@ -9,9 +9,7 @@ export default function ScrollBar({ }) {
   const [slideDirection, setSlideDirection] = useState("");
   const [clickEnabled, setClickEnabled] = useState(true);
 
-  const {    
-    selectedTypeValue,      
-    setSelectedTypeValue,     
+  const {       
     handleTypeSelection, } = useCardTextContext();
 
   function slide(direction) {

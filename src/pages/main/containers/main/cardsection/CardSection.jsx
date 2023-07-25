@@ -36,7 +36,6 @@ export default function QuestionCardShape({ }) {
             'Select a new category and press generate'
           )}
         </div>
-        <ButtonGroup />
       </div>
     </>
   )

@@ -11,14 +11,11 @@ export default function Main({ }) {
     <>
       <div className='main-section'>
         <section className="card-grid">
-          <QuestionCardShape 
-
-          />
+          <QuestionCardShape />
         </section>
         <section className="display-container justify-self-center">
           <div className="display-type-section bg-black">
-            <DisplaySection
-            />
+            <DisplaySection />
           </div>
         </section>
       </div>         

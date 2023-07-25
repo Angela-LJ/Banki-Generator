@@ -6,28 +6,38 @@ import { useCardTextContext } from "../../../hooks/CardTextContext"
 
 export default function BottomSection({ }) {
 
-  const cardTextContext = useCardTextContext();
-  const { handleTypeSelection } = cardTextContext;
-  
+  const {   
+    handleGenerateQuestion, 
+    toggleAnswer,     
+  } = useCardTextContext();
+
   return (
 
   <section className='bottom-grid'>
     <div className="bottom-grid-children grid-arcade-left w-full">
       <div className='svg-btn-container'>
-        <img className="-mb-9" src={generate} alt='Generate question button' />
-        <ArcadeBtn variant='lightPurple' size='default' ></ArcadeBtn>
+        <img 
+        className="-mb-9" src={generate} alt='Generate question button'
+        />
+        <ArcadeBtn 
+          onClickFunction="handleGenerateQuestion"
+          variant='lightPurple' size='default' >
+        </ArcadeBtn>
       </div>
     </div>
     <div className="bottom-grid-children grid-arcade-left w-full">
       <div className='svg-btn-container'>
-        <img className="-mb-7" src={answer} alt="Answer toggle button" />
-        <ArcadeBtn variant='darkPurple' size='default'></ArcadeBtn>
+        <img 
+        className="-mb-7" src={answer} alt="Answer toggle button"
+        />
+        <ArcadeBtn 
+          onClickFunction="toggleAnswer"
+          variant='darkPurple' size='default'>
+        </ArcadeBtn>
       </div>
     </div>
     <div className='bottom-grid-children grid-scrollbar'>
-      <ScrollBar 
-        handleTypeSelection={handleTypeSelection}
-      />
+      <ScrollBar />
     </div>
     <div className="bottom-grid-children grid-arcade-right-1 col-start-6">
       <div className='svg-btn-container'>
