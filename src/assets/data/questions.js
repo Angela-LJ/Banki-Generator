@@ -967,7 +967,7 @@ const questionsAnswers = {
       "#include <stdio.h>",
       "void fibonacciSeries(int n) {",
       " int first = 0, second = 1;",
-      " printf(\"Fibonacci series up to %d:\n\", n);",
+      " printf(\"Fibonacci series up to %d:\", n);",
       " printf(\"%d, %d, \", first, second);",
       " int next;",
       " while (1) {",
@@ -976,7 +976,7 @@ const questionsAnswers = {
       "         first = second;",
       "         second = next;",
       "     }",
-      "     printf(\"\n\");",
+      "     printf(\"\\n\");",
       "}"
       ]
     },
@@ -1048,11 +1048,11 @@ const questionsAnswers = {
     {
       "question": "How do you define a function in C?",
       "answer": [
-      "To define a function in C, you use the following syntax:",
       "return_type function_name(parameter_list) {",
       " // function body",
       " // statements",
       "}",
+      "",
       "The return_type is the data type of the value that the function returns. If the function doesn't return a value, you can use the 'void' keyword as the return_type.",
       "The function_name is the name of the function, which you can choose as per your preference.",
       "The parameter_list contains the data types and names of the parameters the function accepts, separated by commas.",
@@ -1062,7 +1062,6 @@ const questionsAnswers = {
     {
       "question": "What is the syntax for a for loop in C, and what is its purpose?",
       "answer": [
-      "The syntax for a for loop in C is as follows:",
       "for (initialization; condition; increment/decrement) {",
       " // loop body",
       " // statements",

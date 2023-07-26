@@ -9,7 +9,7 @@
   grid
   w-full h-[75vh]
   px-8
-  py-4
+  pb-3
 }
 
 .card-grid {
@@ -22,11 +22,11 @@
 
 .display-type-section {
   @apply shadow-cardshadow rounded-3xl
-  h-56 
+  h-44
   flex justify-center items-center
 }
 
 .display-container {
-  @apply col-start-5 w-56
+  @apply col-start-5 w-44
 }
 

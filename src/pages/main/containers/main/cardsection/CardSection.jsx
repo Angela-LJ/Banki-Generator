@@ -11,30 +11,22 @@ export default function QuestionCardShape({ }) {
   return (
     <>
       <div className="card-shape">
-        <div className="card-text answer-list">
-          {question ? (
-            cardTextContext.showAnswer ? (
-              answer ? (
-                <ul className="">
+        <div className="card-text">
+          {question ? (cardTextContext.showAnswer ? ((
+                <ul className="text-ul">
                   {answer.map((item, index) => (
                     <li key={index}>
-                      <pre className="whitespace-pre-wrap break-words my-1">{item}</pre>
+                      <pre className="answer whitespace-pre-wrap break-words">{item}</pre>
                     </li>
                   ))}
                 </ul>
-              ) : (
-                <pre className="whitespace-pre-wrap break-words my-1">{answer}</pre>
-              )
-            ) : (
+            )) : (
               question.split('\n').map((line, lineIndex) => (
                 <div key={lineIndex}>
-                  <pre className="whitespace-pre-wrap break-words my-1">{line}</pre>
+                  <pre className="question whitespace-pre-wrap break-words">{line}</pre>
                 </div>
-              ))
-            )
-          ) : (
-            'Select a new category and press generate'
-          )}
+              )))
+          ) : ('Select a new category and press generate')}
         </div>
       </div>
     </>

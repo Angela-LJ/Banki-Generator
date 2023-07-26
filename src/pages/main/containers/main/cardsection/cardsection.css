@@ -11,16 +11,12 @@
 }
 
 .card-text {
-  @apply text-left w-11/12 h-auto text-base lg:text-lg/6 pt-2 pl-4
+  @apply text-left w-[40rem] max-w-[95%] h-auto text-base lg:text-lg/6
+  overflow-y-auto max-h-[20rem] text-slate-300
 }
 
-.answer-list {
-  @apply overflow-y-auto max-h-[26rem]
-}
-
-.card-btn {
-  @apply justify-center
-  w-auto mx-auto  max-h-[49px]
+.question {
+  @apply font-extrabold
 }
 
 .card-shape {
@@ -30,15 +26,3 @@
 /*********
 /* COLUMNS
 *********/
-
-.question-column-1 {
-  @apply w-60 flex flex-col
-}
-
-.question-column-2 {
-  @apply hidden xl:flex xl:flex-col xl:w-60
-}
-
-/* .button-container {
-  @apply mb-4;
-} */
