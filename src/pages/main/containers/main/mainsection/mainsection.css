@@ -1,36 +1,32 @@
-body {
-  @apply h-screen bg-gradient-to-b from-[#19055a] via-black to-[#1f1a3b] font-roboto text-gray-200 m-0;
-}
-.header, .hero {
-  @apply flex
-}
-
-.header-title {
-  @apply shadow-buttonshadow shadow-[#182a7b]
-}
-
 
 /****************** 
 /* MAIN
 ******************/
 
-.hero {
-  @apply
-  justify-center
-}
+
 .main-section {
-  @apply grid-cols-cardgrid gap-9
-  w-[97vw] h-[80vh]
-  shadow-cardshadow rounded-3xl
-  bg-gradient-to-b from-[rgba(0,255,0,.05)] to-[rgba(255,255,255,.15)]
-  bg-main
-  p-8
-}
-.question-column-2 {
-  @apply justify-self-end text-right
-}
-.card-grid {
-  @apply col-span-3
+  @apply grid-cols-cardgrid
+  grid
+  w-full h-[75vh]
+  px-8
+  pb-3
 }
 
+.card-grid {
+  @apply col-start-2 col-end-5
+}
+
+/****************** 
+/* DISPLAY SECTION
+******************/
+
+.display-type-section {
+  @apply shadow-cardshadow rounded-3xl
+  h-44
+  flex justify-center items-center
+}
+
+.display-container {
+  @apply col-start-5 w-44
+}
 

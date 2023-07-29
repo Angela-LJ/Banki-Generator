@@ -1,5 +1,5 @@
 const questionsAnswers = {
-  javascriptP: [
+  javascript: [
     {
       "question": "Create a for loop that prints the numbers from 1 to 10.",
       "answer": [
@@ -7,7 +7,7 @@ const questionsAnswers = {
       ]
     },
     {
-      "question": 'Declare a constiable called "message" and assign it the value "Hello, World!".',
+      "question": 'Declare a variable called "message" and assign it the value "Hello, World!".\nExtra: Split the string in to an array with two strings, "Hello" and "World!"',
       "answer": [
         'let message = "Hello, World!";'
       ]
@@ -21,37 +21,44 @@ const questionsAnswers = {
       ]
     },
     {
-      "question": 'Use the addition operator to concatenate the strings "Hello" and "World".',
+      "question": 'Create a variable "string" and assign it the value "Hello". Use the addition operator to concatenate the strings value and "World", and then console.log your result.',
       "answer": [
-        `"Hello" + "World";`
+        "let string = Hello",
+        "console.log(string + ' World')"
       ]
     },
     {
       "question": "Create a function named 'multiply' that takes two parameters 'num1' and 'num2' and returns their product.",
       "answer": [
-        "function multiply(num1, num2) {\n return num1 * num2;\n}"
+        "function multiply(num1, num2) {",
+        " return num1 * num2;",
+        "}"
       ]
     },
     {
       "question": "Write a JavaScript function named 'isEven' that takes a number as a parameter and returns true if the number is even, and false otherwise.",
       "answer": [
-        "function isEven(number) {\n return number % 2 === 0;\n}"
+        "function isEven(number) {",
+        " return number % 2 === 0;",
+      "}"
       ]
     },
     {
-      "question": "Create an array named 'fruits' and initialize it with the values 'apple', 'banana', and 'orange'.",
-      "answer": [ 
+      "question": "Create an array named 'fruits' and initialize it with the values 'apple', 'banana', and 'orange'.\nExtra: add 'strawberry' to the fruits array and console.log fruits",
+      "answer": [
         "let fruits = ['apple', 'banana', 'orange'];"
       ]
     },
     {
       "question": "Write a JavaScript function named 'getLength' that takes an array as a parameter and returns its length.",
       "answer": [
-        "function getLength(array) {\n return array.length;\n}"
+        "function getLength(array) {",
+        " return array.length;",
+        "}"
       ]
     },
     {
-      "question": "Create a conditional statement that checks if a constiable 'age' is greater than or equal to 18, and if so, prints 'You are an adult.'",
+      "question": "Create a conditional statement that checks if a variable 'age' is greater than or equal to 18, and if so, prints 'You are an adult.'",
       "answer": [
         "if (age >= 18) {\n console.log('You are an adult.');\n}"
       ]
@@ -167,6 +174,7 @@ const questionsAnswers = {
     {
       "question": "Find the maximum number from the 'numbers' array using the Math.max method.",
       "answer": [
+        "const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]",
         "let maxNumber = Math.max(...numbers);"
       ]
     },
@@ -177,9 +185,10 @@ const questionsAnswers = {
       ]
     },
     {
-      "question": "Create an array named 'filteredNames' that contains only the names starting with the letter 'A' from the 'names' array using the filter method.",
+      "question": "Create an array named 'names' that contains 'Hillary', 'Jason', 'Johnathan', 'Jacob', 'Leon'. Now create a new array, 'filteredNames' that only contains the names starting with the letter 'J' from the 'names' array using the filter method.",
       "answer": [
-        "let filteredNames = names.filter(name => name.charAt(0) === 'A');"
+        "const names = ['Hillary', 'Jason', 'Johnathan', 'Jacob', 'Leon']",
+        "let filteredNames = names.filter(name => name.charAt(0) === 'J');"
       ]
     },
     {
@@ -187,9 +196,7 @@ const questionsAnswers = {
       "answer": [
         "let nameLengths = names.map(name => name.length);"
       ]
-    }
-  ],
-  javascriptQ: [
+    },
     {
       "question": "How do you access the properties of an object in JavaScript?",
       "answer": [
@@ -199,25 +206,26 @@ const questionsAnswers = {
     {
       "question": "What is the difference between == and === operators in JavaScript?",
       "answer": [
-        "The == operator compares the values of two operands, while the === operator compares the values and types of two operands."
+        "The == Abstract equality operator compares the values of two operands, while the === Strict equality operator compares the values and types of two operands.",
+        "Abstract equality will attempt to resolve the data types via type coercion before making a comparison. Strict equality will return false if the types are different"
       ]
     },
     {
-      "question": "How do you declare a constiable in JavaScript?",
+      "question": "How do you declare a variable in JavaScript?",
       "answer": [
-        "You can declare a constiable in JavaScript using the 'const', 'let', or 'const' keyword."
+        "You can declare a variable in JavaScript using the 'var', 'let', or 'const' keyword."
       ]
     },
     {
-      "question": "What is the difference between let, const, and const in JavaScript?",
+      "question": "What is the difference between let, const, and var in JavaScript?",
       "answer": [
-        "'const' has function scope, 'let' and 'const' have block scope. 'const' is used for constiables that won't be reassigned, while 'let' and 'const' can be reassigned."
+        "'var' has function scope, 'let' and 'const' have block scope. 'const' is used for variables that won't be reassigned, while 'let' and 'const' can be reassigned."
       ]
     },
     {
       "question": "What are the different data types in JavaScript?",
       "answer": [
-        "JavaScript has several data types, including number, string, boolean, object, null, and undefined."
+        "JavaScript has several data types, including number, string, boolean, object, null, symbol, and undefined."
       ]
     },
     {
@@ -271,7 +279,7 @@ const questionsAnswers = {
     {
       "question": "What is an array in JavaScript?",
       "answer": [
-        "An array is a data structure in JavaScript that allows you to store multiple values in a single constiable. It is represented by square brackets [] and the values are separated by commas."
+        "An array is a data structure in JavaScript that allows you to store multiple values in a single variable. It is represented by square brackets [] and the values are separated by commas."
       ]
     },
     {
@@ -349,6 +357,7 @@ const questionsAnswers = {
     {
       "question": "What is the difference between 'call()', 'apply()', and 'bind()' methods in JavaScript?",
       "answer": [
+        "Both call() and apply() are used to invoke functions the difference is in how they take arguments. .call() takes them as comma-separated values and .apply() takes them as an array.",
         "'call()', 'apply()', and 'bind()' are methods used to set the value of 'this' in a function. 'call()' and 'apply()' invoke the function immediately, while 'bind()' returns a new function with the bound 'this' value."
       ]
     },
@@ -369,9 +378,96 @@ const questionsAnswers = {
       "answer": [
         "The event loop is a mechanism in JavaScript that allows for asynchronous execution of code. It handles the execution of tasks in a non-blocking manner, allowing other code to run while waiting for asynchronous operations to complete."
       ]
-    }
+    },
+    {
+      "question": "What is type coercion?",
+      "answer": [
+        "Type coercion is the process of converting a value from one data type to another.",
+        "In JavaScript, type coercion happens implicitly when operators or functions are applied to values of different types.",
+        "Any type of primitive or object is valid for type coercion."
+      ]
+    },
+    {
+      "question": "What are the primitive data types in JavaScript?\nExtra: describe the data types format and purpose.",
+      "answer": [
+        "String: a sequence of characters used to represent text",
+        "Number: a numeric data type in the double-precision 64-bit floating point format (IEE 754)",
+        "BigInt: BigInt is a numeric data type that can represent integers in the arbitrary precision format, and represents numbers too large for the number primitive",
+        "Boolean: a logical data type that has only two values, true or false",
+        "Undefined: a primitive value automatically assigned to variables that have just been declared, or to formal arguments for which there are no actual arguments.",
+        "Symbol: a built in object whose constructor returns a symbol that is used to add unique property keys to an object that won't collide with keys any other code might add to the object, and which are hidden from any mechanisms other code will typically use to access the object. That enables a form of weak encapsulation, or a weak form of information hiding",
+        "Null: a value that represents a reference that points, generally intentionally, to a nonexistent or invalid object or address."
+      ]
+    },
+    {
+      "question": "What is arbitrary precision format?",
+      "answer": [
+        "Arbitrary precision format, also known as arbitrary precision arithmetic or bignum arithmetic, is a method of representing and performing calculations on numbers with an unlimited number of digits. Unlike fixed-width data types, which have a predetermined number of bits or digits, arbitrary precision format uses dynamic data structures to store individual digits, allowing for precise calculations with numbers of any size. It enables accurate computations in applications where precision and range are essential, albeit with increased computational overhead compared to fixed-width types.",
+        "Arbitrary precision format overcomes these limitations by using dynamic data structures, such as arrays or linked lists, to store digits of a number. Each digit is typically represented using an integer or a similar data type. This approach allows for numbers with an arbitrarily large number of digits."
+      ]
+    },
+    {
+      "question": "What is the hasOwnProperty(), or Object.hasOwn() method used for?",
+      "answer": "Both methods return a boolean indicating whether the object has the specified property as its own property, as opposed to inheriting it"
+    },
+    {
+      "question": "What are closures in JavaScript?",
+      "answer": [
+        "A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function's scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.",
+        "Encapsulation: Closures allow you to create private variables and methods by encapsulating data within a function, preventing external access and unintended modifications.",
+        "Preserving state: Closures enable functions to retain access to their surrounding variables and values, even after the enclosing function has finished executing, allowing them to maintain and reference that state.",
+        "Data privacy: Closures help enforce data privacy by exposing only necessary functions and variables to the outside world while keeping the rest hidden, enabling controlled access to internal components.",
+        "Function factories: Closures are utilized to create function factories that generate specialized functions based on arguments provided, allowing the generated functions to retain access to the closure's variables and configurations.",
+        "Callbacks and asynchronous operations: Closures play a crucial role in handling callbacks and asynchronous operations by storing references to required data within the closure, ensuring accessibility when the asynchronous operation completes, even if the original function has finished execution."
+      ]
+    },
+    {
+      "question": "What is prototypal inheritance?",
+      "answer": [
+        "Prototypal inheritance is a fundamental concept in JavaScript that allows objects to inherit properties and methods from other objects. It is a way to create new objects based on existing objects, known as prototypes."
+      ]
+    },
+    {
+      "question": "How does prototypal inheritance work?",
+      "answer": [
+        "Explanation: All JavaScript objects have a __proto__ property that is a reference to another object, which is called the object's \"prototype\". If a property is accessed on an object, but not found, the JavaScript engine check's that object prototype. If again it's not found, it checks that prototype's prototype on up the chain until it reaches the top of the chain.",
+        "Use: It can help reduce redundant code."
+      ],
+      "example": [
+        "/images/prototypal.jpg", 
+        "For more information, check out the documentation:",
+        "Source: https://www.frontendinterviewhandbook.com/javascript-questions"
+      ]
+    },
+    {
+      "question": "Create a function 'Digital root,' which is the recursive sum of all the digits in a number. Given n, take the sum of the digits of n. If that value has more than one digit, continue reducing in this way until a single-digit number is produced. The input will be a non-negative integer.\n 16  -->  1 + 6 = 7\n942  -->  9 + 4 + 2 = 15  -->  1 + 5 = 6",
+      "answer": [
+        "function digitalRoot(n) {",
+        " if (n < 10)",
+        "   return n;",
+        " const digits = n.toString();",
+        " const sumDigits = digits.split('').reduce(",
+        "   (acc, digit) => acc + parseInt(digit, 10), 0);",
+        " return digitalRoot(sumDigits);"
+      ]
+    },
+    {
+      "question": "The examples below show you how to write function accum:\naccum('abcd') -> 'A-Bb-Ccc-Dddd'\naccum('RqaEzty') -> 'R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy'\naccum('cwAt') -> 'C-Ww-Aaa-Tttt'",
+      "answer": [
+        "function accum(s) {",
+        "  const result = [];",
+        "  const chars = s.split('');",
+        "  for (let i = 0; i < chars.length; i++) {",
+        "    let char = chars[i].toUpperCase();",
+        "    const repetition = i + 1;",
+        "    result.push(char + chars[i].toLowerCase().repeat(repetition - 1));",
+        "  }",
+        "  return result.join('-');",
+        "}"
+      ]
+    },
   ],
-  gitQ: [
+  git: [
     {
       "question": "How do you initialize a new Git repository?",
       "answer": ["git init"]
@@ -449,7 +545,7 @@ const questionsAnswers = {
       "answer": ["git reset --hard HEAD"]
     }
   ],
-  pythonP: [
+  python: [
     {
       "question": "Write a function in Python to check if a number is prime.",
       "answer": [
@@ -587,9 +683,7 @@ const questionsAnswers = {
       "answer": [
       "def sort_list_of_dictionaries(lst, key):\n return sorted(lst, key=lambda x: x[key])"
       ]
-    }
-  ],
-  pythonQ: [
+    },
     {
       "question": "What is a decorator in Python?",
       "answer": [
@@ -733,13 +827,13 @@ const questionsAnswers = {
       "answer": [
       "Monkey patching in Python refers to the practice of modifying or extending code at runtime, typically by adding, modifying, or replacing methods or attributes of existing classes or objects. It allows you to change the behavior of code without modifying its original source code. Monkey patching can be a powerful technique but should be used with caution as it can make code harder to understand and maintain."
       ]
-    },  
+    },
     {
       "question": "What is the Global Namespace and Local Namespace in Python?",
       "answer": [
       "In Python, the global namespace refers to the namespace that contains names defined at the top level of a module or script. It is accessible throughout the module or script. On the other hand, the local namespace refers to the namespace created when a function is called. It contains names defined within the function's scope and is destroyed when the function returns."
       ]
-    },  
+    },
     {
       "question": "What is the purpose of the 'name' variable in Python?",
       "answer": [
@@ -763,9 +857,19 @@ const questionsAnswers = {
       "answer": [
       "Sets and frozensets are both unordered collections of unique elements in Python. The main difference is that sets are mutable, while frozensets are immutable. This means that you can add, remove, or modify elements in a set, but you cannot do so in a frozenset. Sets are useful for storing and manipulating data, while frozensets are useful when you need an immutable set that can be used as a dictionary key or an element in another set."
       ]
+    },
+    {
+      "question": "The examples below show you how to write function accum:\naccum('abcd') -> 'A-Bb-Ccc-Dddd'\naccum('RqaEzty') -> 'R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy'\naccum('cwAt') -> 'C-Ww-Aaa-Tttt'",
+      "answer": [
+        "def accum(s):",
+        "  newString = \"\"",
+        "  for i, char in enumerate(s):",
+        "    newString += char.upper() + char.lower() * i + \"-\"",
+        "  return newString[:-1]"
+      ]
     }
   ],
-  cP: [
+  c: [
     {
       "question": "Write a function to calculate the factorial of a number.",
       "answer": [
@@ -863,7 +967,7 @@ const questionsAnswers = {
       "#include <stdio.h>",
       "void fibonacciSeries(int n) {",
       " int first = 0, second = 1;",
-      " printf(\"Fibonacci series up to %d:\n\", n);",
+      " printf(\"Fibonacci series up to %d:\", n);",
       " printf(\"%d, %d, \", first, second);",
       " int next;",
       " while (1) {",
@@ -872,7 +976,7 @@ const questionsAnswers = {
       "         first = second;",
       "         second = next;",
       "     }",
-      "     printf(\"\n\");",
+      "     printf(\"\\n\");",
       "}"
       ]
     },
@@ -931,9 +1035,7 @@ const questionsAnswers = {
       " return gcd(b, a % b);",
       "}"
       ]
-    }
-  ],
-  cQ: [
+    },
     {
       "question": "What is the syntax for declaring a variable in C?",
       "answer": [
@@ -946,11 +1048,11 @@ const questionsAnswers = {
     {
       "question": "How do you define a function in C?",
       "answer": [
-      "To define a function in C, you use the following syntax:",
       "return_type function_name(parameter_list) {",
       " // function body",
       " // statements",
       "}",
+      "",
       "The return_type is the data type of the value that the function returns. If the function doesn't return a value, you can use the 'void' keyword as the return_type.",
       "The function_name is the name of the function, which you can choose as per your preference.",
       "The parameter_list contains the data types and names of the parameters the function accepts, separated by commas.",
@@ -960,7 +1062,6 @@ const questionsAnswers = {
     {
       "question": "What is the syntax for a for loop in C, and what is its purpose?",
       "answer": [
-      "The syntax for a for loop in C is as follows:",
       "for (initialization; condition; increment/decrement) {",
       " // loop body",
       " // statements",
@@ -1225,8 +1326,97 @@ const questionsAnswers = {
       "sizeof(variable): Returns the size of the variable's type.",
       "The size calculated by sizeof depends on the implementation and the target architecture. It allows programs to work with types and variables in a more flexible and portable manner, ensuring that the correct amount of memory is allocated or accessed."
       ]
+    },
+    {
+      "question": "Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.\nExample: createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) // => returns '(123) 456-7890'",
+      "answer": [
+        "function createPhoneNumber(phnum, nums) {",
+        " let numCount = 0;",
+        " for (let i = 0; i < 15; i++) {",
+        "   switch (i) {",
+        "     case 0:",
+        "       phnum[i] = '(';",
+        "       break;",
+        "     case 4:",
+        "       phnum[i] = ')';",
+        "       break;",
+        "     case 5:",
+        "       phnum[i] = ' ';",
+        "       break;",
+        "     case 9:",
+        "       phnum[i] = '-';",
+        "       break;",
+        "     case 14:",
+        "       phnum[i] = '\\0';",
+        "       break;",
+        "       break;",
+        "     default:",
+        "       phnum[i] = String.fromCharCode(nums[numCount] + 48);",
+        "       numCount++;",
+        "   }",
+        " }",
+        "}"
+      ]
+    },
+    {
+      "question": "The examples below show you how to write function accum:\naccum('abcd') -> 'A-Bb-Ccc-Dddd'\naccum('RqaEzty') -> 'R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy'\naccum('cwAt') -> 'C-Ww-Aaa-Tttt'",
+      "answer": [
+        "#include <stdio.h>",
+        "#include <ctype.h>",
+        "#include <string.h>",
+        "#include <stdlib.h>",
+        "char *accum(const char *source){",
+        "  int length = strlen(source);",
+        "  char* result = (char*)malloc(length * (length + 1) / 2 + length);",
+        "  int result_index = 0;",
+        "",
+        "  for (int i = 0; i < length; i++){",
+        "    char ch = source[i];",
+        "    result[result_index++] = toupper(ch);",
+        "    ",
+        "    for (int j = 0; j < i; j++){",
+        "      result[result_index++] = tolower(ch);",
+        "    }",
+        "    if (i != length - 1){",
+        "      result[result_index++] = '-';",
+        "    }",
+        "  }",
+        "  result[result_index] = '\\0';",
+        "  return result;",
+        "}"
+      ]
+    },
+    {
+      "question": "You are given a string of space separated numbers, and have to return the highest and lowest number.\nExample: highAndLow(\"1 2 3 4 5\");  // return \"5 1\"",
+      "answer": [
+        '#include <stdio.h>',
+        '#include <stdlib.h>',
+        '#include <limits.h>',
+        'void high_and_low (const char *strnum, char *result)',
+        '{',
+        '  int lowest = INT_MAX;',
+        '  int highest = INT_MIN;',
+        '  int current;',
+        '  ',
+        '  while(sscanf(strnum, "%d", &current)== 1){',
+        '    if (current > highest){',
+        '      highest = current;',
+        '    }',
+        '    if (current < lowest){',
+        '      lowest = current;',
+        '    }',
+        '    while (*strnum != " " && *strnum != "\0"){',
+        '      strnum++;',
+        '    }',
+        '    if (*strnum == " "){',
+        '      strnum++;',
+        '    }',
+        '  }',
+        '  sprintf(result, "%d %d", highest, lowest);',
+        '}'
+      ]
     }
-  ]
+  ],
 }
 
 export default questionsAnswers

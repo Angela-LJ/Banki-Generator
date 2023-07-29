@@ -1,0 +1,112 @@
+.arcade-btn-light-p {
+  position: relative;
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+  border: 1px solid #670386;
+  margin: 1em;
+  outline: none;
+  background-color: #5a0ac2;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: box-shadow 200ms;
+  @apply shadow-arcade-btn-light-p-default;
+}
+
+.arcade-btn-light-p:active,
+.arcade-btn-light-p.is-pushed {
+  @apply shadow-arcade-btn-light-p-pushed;
+  @apply bg-arcade-btn-light-p-bg;
+}
+
+.arcade-btn-dark-p {
+  position: relative;
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+  border: 1px solid #2a0386;
+  margin: 1em;
+  outline: none;
+  background-color: #510cc8;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: box-shadow 200ms;
+}
+
+.arcade-btn-dark-p{
+  @apply shadow-arcade-btn-dark-p
+}
+
+.arcade-btn-dark-p:active,
+.arcade-btn-dark-p.is-pushed {
+  @apply shadow-arcade-btn-dark-p-pushed
+}
+
+.arcade-btn-light-b {
+  position: relative;
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+  border: 1px solid #17657a;
+  margin: 1em;
+  outline: none;
+  background-color: #257ecd;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: box-shadow 200ms;
+}
+
+.arcade-btn-light-b{
+  @apply shadow-arcade-btn-light-b-default
+}
+
+.arcade-btn-light-b:active,
+.arcade-btn-light-b.is-pushed {
+  @apply shadow-arcade-btn-light-b-pushed
+}
+
+.arcade-btn-dark-b {
+  position: relative;
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+  border: 1px solid #2b5ef8;
+  margin: 1em;
+  outline: none;
+  background-color: #2c45ff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: box-shadow 200ms;
+}
+
+.arcade-btn-dark-b{
+@apply shadow-arcade-btn-dark-b-default
+}
+
+.arcade-btn-dark-b:active,
+.arcade-btn-dark-b.is-pushed {
+  @apply shadow-arcade-btn-dark-b-pushed
+}
+
+.arcade-btn-light-p:after,.arcade-btn-dark-p:after,
+.arcade-btn-light-b:after,.arcade-btn-dark-b:after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-width: 0 0 1px;
+  border-radius: 50%;
+  transition-duration: 200ms;
+}
+
+.arcade-btn-light-p:active:after,.arcade-btn-light-p.is-pushed:after,
+.arcade-btn-dark-p:active:after,.arcade-btn-dark-p.is-pushed:after,
+.arcade-btn-light-b:active:after,.arcade-btn-light-b.is-pushed:after,
+.arcade-btn-dark-b:active:after,.arcade-btn-dark-b.is-pushed:after {
+  bottom: 10.5px;
+  border-width: 0;
+}
+
+
+
+
+

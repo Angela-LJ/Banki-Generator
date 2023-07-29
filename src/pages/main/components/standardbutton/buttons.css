@@ -4,25 +4,27 @@
 .toggle-btn {
   @apply w-44 py-[.8rem] px-[.7rem] flex justify-center self-center active:bg-orange-500 active:text-[#828cff]
 }
-.button {
-  @apply bg-black rounded-xl font-mono hover:shadow-buttonhover hover:translate-y-1 
-}
 .generate-button {
   @apply mr-5 px-4 py-[.8rem] flex self-center active:bg-orange-500 active:text-[#828cff]
 }
+
 .button {
-  @apply border-[5px] border-[#828cff] border-double
-}
-.button {
-  @apply shadow-buttonshadow shadow-[#182a7b]
+  @apply shadow-buttonshadow shadow-[#182a7b] bg-black rounded-xl font-mono hover:shadow-buttonhover hover:translate-y-1 
+  border-[5px] border-[#828cff] border-double text-xl 
 }
 /*********
 /* SIDE BTNS
 *********/
+.select-btn {
+  @apply inline-block 
+  rounded-lg p-2 w-80 text-xl font-bold
+}
 
 .options-btn {
   @apply w-11/12 py-[.5rem] max-w-[220px] max-h-[49px]
 }
 .selected-btn {
-  @apply bg-orange-500 text-[#828cff]
+  @apply bg-orange-500 text-[#828cff] 
 }
+
+

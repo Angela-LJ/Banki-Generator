@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply h-screen p-4 bg-gradient-to-b from-[#19055a] via-black to-[#1f1a3b] font-roboto text-gray-200 m-0;
+}
+
+/****************
+/* MAIN SECTION
+****************/
+
+.hero {
+  @apply flex justify-center w-[98vw] h-[97vh] flex-col
+  shadow-cardshadow rounded-3xl
+  bg-gradient-to-b from-[#1f1a3b] from-30% to-[#19055a] to-80%
+}
+
+
+
+/****************
+/* BOTTOM SECTION
+****************/
+
