@@ -2,14 +2,9 @@ import './bottomsection.css'
 import generate from '../../../../../assets/svg/generate.svg'
 import answer from '../../../../../assets/svg/answer.svg'
 import { ScrollBar, ArcadeBtn } from '../../../components/index'
-import { useCardTextContext } from "../../../hooks/CardTextContext"
+
 
 export default function BottomSection({ }) {
-
-  const {   
-    handleGenerateQuestion, 
-    toggleAnswer,     
-  } = useCardTextContext();
 
   return (
 
