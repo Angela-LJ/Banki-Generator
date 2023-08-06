@@ -1,5 +1,4 @@
 import React from 'react';
-import { ButtonGroup } from '../../../components/index';
 import './cardsection.css'
 import { useCardTextContext } from "../../../hooks/CardTextContext";
 
@@ -13,19 +12,24 @@ export default function QuestionCardShape({ }) {
       <div className="card-shape">
         <div className="card-text">
           {question ? (cardTextContext.showAnswer ? ((
-                <ul className="text-ul">
-                  {answer.map((item, index) => (
-                    <li key={index}>
-                      <pre className="answer whitespace-pre-wrap break-words">{item}</pre>
+            <div className="text-left max-w-2xl"> 
+              <ul className="">
+                  {answer.map((answer) => (
+                    <li key={answer}>
+                      <pre className="answer whitespace-pre-wrap break-words">{answer}</pre>
                     </li>
                   ))}
-                </ul>
+               </ul>
+            </div>
             )) : (
-              question.split('\n').map((line, lineIndex) => (
-                <div key={lineIndex}>
+              <div className="text-left max-w-2xl"> 
+                {question.split('\n').map((line, lineIndex) => (
+                <p key={lineIndex}>
                   <pre className="question whitespace-pre-wrap break-words">{line}</pre>
-                </div>
-              )))
+                </p>
+              ))}
+              </div>
+            )
           ) : ('Select a new category and press generate')}
         </div>
       </div>

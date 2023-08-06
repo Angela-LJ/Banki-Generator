@@ -7,16 +7,16 @@
   h-full w-full rounded-3xl
   shadow-questionshadow
   flex flex-col justify-between
-  p-6
+  py-6 px-10
 }
 
 .card-text {
-  @apply text-left w-[40rem] max-w-[95%] h-auto text-base lg:text-lg/6
-  overflow-y-auto max-h-[20rem] text-slate-300
+  @apply max-w-[98%] h-[35rem] text-base lg:text-lg/6
+  overflow-y-auto max-h-[98%] text-slate-300 flex flex-col justify-center items-center
 }
 
 .question {
-  @apply font-extrabold
+  @apply font-extrabold w-auto
 }
 
 .card-shape {

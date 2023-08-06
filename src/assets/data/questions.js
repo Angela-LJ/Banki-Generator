@@ -466,6 +466,35 @@ const questionsAnswers = {
         "}"
       ]
     },
+    {
+      "question": "Given an array of integers, find the one that appears an odd number of times.\nExample:\n[1,2,2,3,3,3,4,3,3,3,2,2,1] should return 4, because it appears 1 time (which is odd).",
+      "answer": [
+        "function findOdd(arr) {",
+        "  const count = arr.reduce((acc, currentNum) => {",
+        "    acc[currentNum] = (acc[currentNum] || 0) + 1;",
+        "    return acc",
+        "  }, {}) <-- Initial value for acc, empty object",
+        "",
+        "  const oddNum = Object.keys(count).filter((num) => count[num] % 2 === 1);",
+        "  return Number(oddNum);",
+        "}"
+      ]
+    },
+    {
+      "question": "Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed. Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.",
+      "answer": [
+        "function spinWords(string) {",
+        " const words = string.split(' ')",
+        " const newString = words.map(word => {",
+        "   if (word.length >= 5){",
+        "     return word.split('').reverse().join('');",
+        "   }",
+        "   return word;",
+        "   });",
+        "   return newString.join(' ');",
+        "}"
+      ]
+    }
   ],
   git: [
     {
