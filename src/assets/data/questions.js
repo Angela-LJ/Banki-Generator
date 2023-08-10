@@ -494,6 +494,17 @@ const questionsAnswers = {
         "   return newString.join(' ');",
         "}"
       ]
+    },
+    {
+      "question": "Create a function that removes vowels from a string",
+      "answer": [
+        "function disemvowel(str) {",
+        "  const splitString = str.split('').filter(char => {",
+        "    return !char.match(/[aeiou]/i);",
+        "  )}",
+        "  return splitString.join('');",
+        "}"
+      ]
     }
   ],
   git: [
