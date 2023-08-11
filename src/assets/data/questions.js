@@ -504,7 +504,17 @@ const questionsAnswers = {
         "    acc.set(char, (acc.get(char) || 0) + 1);",
         "    return acc;",
         "  }, new Map());",
-        "  return charArray.map(e => (charMap.get(e) > 1 ? ')' : '(')).join('');"
+        "  return charArray.map(e => (charMap.get(e) > 1 ? ')' : '(')).join('');",
+     },
+     {
+        "question": "Create a function that removes vowels from a string",
+        "answer": [
+          "function disemvowel(str) {",
+          "  const splitString = str.split('').filter(char => {",
+          "    return !char.match(/[aeiou]/i);",
+          "  )}",
+          "  return splitString.join('');",
+          "}"
       ]
     }
   ],
