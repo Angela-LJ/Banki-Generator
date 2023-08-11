@@ -494,6 +494,18 @@ const questionsAnswers = {
         "   return newString.join(' ');",
         "}"
       ]
+    },
+    {
+      "question": "Write a function that determines if characters are duplicated in a string, if the char is has more than one occurence, replace with ')', otherwise with '('. It must be case-insensitive.",
+      "answer": [
+        "function duplicateEncode(string) {",
+        "  const charArray = Array.from(string.toLowerCase());",
+        "  const charMap = charArray.reduce((acc, char) => {",
+        "    acc.set(char, (acc.get(char) || 0) + 1);",
+        "    return acc;",
+        "  }, new Map());",
+        "  return charArray.map(e => (charMap.get(e) > 1 ? ')' : '(')).join('');"
+      ]
     }
   ],
   git: [
