@@ -496,14 +496,25 @@ const questionsAnswers = {
       ]
     },
     {
-      "question": "Create a function that removes vowels from a string",
+      "question": "Write a function that determines if characters are duplicated in a string, if the char is has more than one occurence, replace with ')', otherwise with '('. It must be case-insensitive.",
       "answer": [
-        "function disemvowel(str) {",
-        "  const splitString = str.split('').filter(char => {",
-        "    return !char.match(/[aeiou]/i);",
-        "  )}",
-        "  return splitString.join('');",
-        "}"
+        "function duplicateEncode(string) {",
+        "  const charArray = Array.from(string.toLowerCase());",
+        "  const charMap = charArray.reduce((acc, char) => {",
+        "    acc.set(char, (acc.get(char) || 0) + 1);",
+        "    return acc;",
+        "  }, new Map());",
+        "  return charArray.map(e => (charMap.get(e) > 1 ? ')' : '(')).join('');",
+     },
+     {
+        "question": "Create a function that removes vowels from a string",
+        "answer": [
+          "function disemvowel(str) {",
+          "  const splitString = str.split('').filter(char => {",
+          "    return !char.match(/[aeiou]/i);",
+          "  )}",
+          "  return splitString.join('');",
+          "}"
       ]
     }
   ],
