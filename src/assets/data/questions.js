@@ -414,6 +414,11 @@ const questionsAnswers = {
       "question": "What are closures in JavaScript?",
       "answer": [
         "A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function's scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.",
+      ]
+    },
+    {
+      "question": "What are the benefits of creating closures?",
+      "answer": [
         "Encapsulation: Closures allow you to create private variables and methods by encapsulating data within a function, preventing external access and unintended modifications.",
         "Preserving state: Closures enable functions to retain access to their surrounding variables and values, even after the enclosing function has finished executing, allowing them to maintain and reference that state.",
         "Data privacy: Closures help enforce data privacy by exposing only necessary functions and variables to the outside world while keeping the rest hidden, enabling controlled access to internal components.",
