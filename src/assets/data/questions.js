@@ -521,6 +521,19 @@ const questionsAnswers = {
           "  return splitString.join('');",
           "}"
       ]
+    },
+    {
+      "question": "Create a function that returns the position in the alphabet of each character in a string. Ignore spaces.",
+      "answer": [
+        "function alphabetPosition(text) {",
+        "  let result = \"\";",
+        "  for (let i = 0; i < text.length; i++) {",
+        "    const code = text.toUpperCase().charCodeAt(i)",
+        "    if (code > 64 && code < 91) result += (code - 64) + \" \";",
+        "  }",
+        "  return result.slice(0, result.length - 1);",
+        "}"
+      ]
     }
   ],
   git: [
